@@ -25,10 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Initialize card
-
+            <string>image_index = 3;
 image_speed = 0;
-image_index = 3;
+selected=false;
 </string>
           </argument>
         </arguments>

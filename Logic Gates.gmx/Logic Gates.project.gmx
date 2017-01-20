@@ -32,15 +32,15 @@
     <object>objects\obj_draw_button</object>
     <object>objects\obj_hand</object>
     <object>objects\obj_stack</object>
-    <object>objects\obj_turn_controller</object>
     <object>objects\obj_attack_button</object>
-    <object>objects\obj_card_red</object>
+    <object>objects\obj_turn_controller</object>
     <objects name="cards">
       <object>objects\obj_card</object>
       <object>objects\obj_card_blue</object>
       <object>objects\obj_card_white</object>
       <object>objects\obj_card_black</object>
       <object>objects\obj_card_yellow</object>
+      <object>objects\obj_card_red</object>
     </objects>
     <object>objects\obj_player</object>
     <object>objects\obj_enemy</object>

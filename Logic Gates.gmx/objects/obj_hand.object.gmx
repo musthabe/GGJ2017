@@ -28,6 +28,7 @@
             <string>///Initialize player hand
 image_speed = 0;
 hand_size = 5;
+selected_count = 0;
 
 //Create hand list
 hand = ds_list_create();
@@ -37,6 +38,29 @@ for (var i = 0; i &lt; hand_size; i++){
 
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_text(100,300, "Selected cards: " + string(selected_count));
 </string>
           </argument>
         </arguments>
