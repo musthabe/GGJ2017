@@ -21,6 +21,7 @@
     <object>objects\obj_card</object>
     <object>objects\obj_draw_controller</object>
     <object>objects\obj_shuffle_button</object>
+    <object>objects\obj_hand</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_l1</room>
