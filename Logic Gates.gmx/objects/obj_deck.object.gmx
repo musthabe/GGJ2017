@@ -60,9 +60,8 @@ for (var i = 0; i &lt; deck_size; i++){
             <kind>1</kind>
             <string>///Control the deck image
 
-//var deck_size = ds_stack_size(deck);
-//image_index = min(3, deck_size);
-
+var deck_size = ds_list_size(deck);
+image_index = min(3, deck_size);
 </string>
           </argument>
         </arguments>
