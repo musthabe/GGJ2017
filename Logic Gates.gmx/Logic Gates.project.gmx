@@ -10,21 +10,40 @@
     <sprite>sprites\spr_deck</sprite>
     <sprite>sprites\spr_card</sprite>
     <sprite>sprites\spr_draw_button</sprite>
+    <sprite>sprites\spr_attack_button</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_shuffle_deck.gml</script>
     <script>scripts\scr_draw_hand.gml</script>
+    <scripts name="FSMScripts">
+      <script>scripts\state_machine_init.gml</script>
+      <script>scripts\state_create.gml</script>
+      <script>scripts\state_cleanup.gml</script>
+      <script>scripts\state_execute.gml</script>
+      <script>scripts\state_init.gml</script>
+      <script>scripts\state_switch.gml</script>
+      <script>scripts\state_switch_previous.gml</script>
+      <script>scripts\state_update.gml</script>
+    </scripts>
+    <script>scripts\scr_enemy_attack.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_card_red</object>
-    <object>objects\obj_card_blue</object>
-    <object>objects\obj_card_white</object>
-    <object>objects\obj_card_black</object>
-    <object>objects\obj_card_yellow</object>
     <object>objects\obj_draw_button</object>
     <object>objects\obj_hand</object>
+    <object>objects\obj_stack</object>
+    <object>objects\obj_turn_controller</object>
+    <object>objects\obj_attack_button</object>
+    <object>objects\obj_card_red</object>
+    <objects name="cards">
+      <object>objects\obj_card</object>
+      <object>objects\obj_card_blue</object>
+      <object>objects\obj_card_white</object>
+      <object>objects\obj_card_black</object>
+      <object>objects\obj_card_yellow</object>
+    </objects>
+    <object>objects\obj_player</object>
+    <object>objects\obj_enemy</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\testroom</room>
