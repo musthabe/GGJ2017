@@ -16,4 +16,6 @@ with(obj_deck){
         xx += 80; 
     }
     
+    deck_size -= 5;
+    
 }

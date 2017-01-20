@@ -9,22 +9,25 @@
     <sprite>sprites\spr_card_back</sprite>
     <sprite>sprites\spr_deck</sprite>
     <sprite>sprites\spr_card</sprite>
-    <sprite>sprites\spr_shuffle_button</sprite>
+    <sprite>sprites\spr_draw_button</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_shuffle_deck.gml</script>
+    <script>scripts\scr_draw_hand.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_deck</object>
-    <object>objects\obj_card</object>
-    <object>objects\obj_draw_controller</object>
-    <object>objects\obj_shuffle_button</object>
+    <object>objects\obj_card_red</object>
+    <object>objects\obj_card_blue</object>
+    <object>objects\obj_card_white</object>
+    <object>objects\obj_card_black</object>
+    <object>objects\obj_card_yellow</object>
+    <object>objects\obj_draw_button</object>
     <object>objects\obj_hand</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_l1</room>
+    <room>rooms\testroom</room>
   </rooms>
   <constants number="6">
     <constant name="NOT">0</constant>
