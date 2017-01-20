@@ -3,4 +3,9 @@
 
 with(obj_player){
     hp -= argument0;
+    with(obj_player){
+        if (hp <= 0){
+            global.player_dead = true;
+        }
+    }
 }

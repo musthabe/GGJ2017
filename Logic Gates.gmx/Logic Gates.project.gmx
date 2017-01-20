@@ -44,9 +44,11 @@
     </objects>
     <object>objects\obj_player</object>
     <object>objects\obj_enemy</object>
+    <object>objects\obj_game_over_menu</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\testroom</room>
+    <room>rooms\rm_game_over</room>
   </rooms>
   <constants number="6">
     <constant name="NOT">0</constant>
