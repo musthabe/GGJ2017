@@ -78,6 +78,8 @@ instance_create(x,y,obj_timer);
 
 global.selected_count = 0;
 
+with(obj_operator){instance_destroy()}
+
 
 </string>
           </argument>

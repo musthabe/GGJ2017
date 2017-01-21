@@ -17,6 +17,10 @@
     <sprite>sprites\spr_start_game</sprite>
     <sprite>sprites\spr_quit_game</sprite>
     <sprite>sprites\spr_operator_and</sprite>
+    <sprite>sprites\spr_operator</sprite>
+    <sprite>sprites\spr_player_idle</sprite>
+    <sprite>sprites\spr_player_attack</sprite>
+    <sprite>sprites\spr_enemy</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
