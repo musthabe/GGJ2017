@@ -79,10 +79,12 @@ else {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if selected {
+            <string>q_pos=-1
+if selected {
     selected = false;
     global.selected_count -= 1;
-    ds_list_delete(obj_queue.queue, ds_list_find_index(obj_queue.queue, self));
+    q_pos=ds_list_find_index(obj_queue.queue, self)
+    ds_list_delete(obj_queue.queue, q_pos);
     ds_list_insert(obj_hand.hand, self.position, self);
     self.x = obj_hand.xx + self.position * global.card_offset;
     self.y = obj_hand.yy;
@@ -94,6 +96,29 @@ else {
     self.x = obj_queue.xx + ds_list_size(obj_queue.queue) * global.card_offset;
     self.y = obj_queue.yy;
     ds_list_add(obj_queue.queue, self);
+}
+
+
+//If more than 2 elements in queue, add operator between
+
+q_size = ds_list_size(obj_queue.queue);
+
+if (q_size &gt; 1){
+    card1=ds_list_find_value(obj_queue.queue, q_size-2);    
+    card2=ds_list_find_value(obj_queue.queue, q_size-1);    
+    
+    if selected {
+        op = instance_create((card1.x + card2.x)/2, card1.y, obj_operator);
+        ds_list_add(obj_queue.operators, op);
+    }
+}
+
+if not selected and (q_size &gt;= 1){
+    op_pos=max(0,q_pos-1)
+    op= ds_list_find_value(obj_queue.operators, op_pos);
+    
+    ds_list_delete(obj_queue.operators, op_pos);
+    with(op){instance_destroy();}
 }
 </string>
           </argument>

@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>queue = ds_list_create();
+operators = ds_list_create();
 
 xx = 120;
 yy = 480;
