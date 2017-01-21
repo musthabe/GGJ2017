@@ -75,6 +75,10 @@
             <kind>1</kind>
             <string>image_index = 0;
 instance_create(x,y,obj_timer);
+
+global.selected_count = 0;
+
+
 </string>
           </argument>
         </arguments>

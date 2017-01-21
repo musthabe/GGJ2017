@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>selected = false;
+
+
 </string>
           </argument>
         </arguments>
@@ -48,15 +50,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if selected {
+            <string>/*if selected {
     y = 540;
-
 }
 
 else {
     y = 640;
-
-}
+}*/
 </string>
           </argument>
         </arguments>
@@ -81,15 +81,19 @@ else {
             <kind>1</kind>
             <string>if selected {
     selected = false;
-    with(obj_hand){
-        selected_count -= 1;
-    }
-}    
+    global.selected_count -= 1;
+    ds_list_delete(obj_queue.queue, ds_list_find_index(obj_queue.queue, self));
+    ds_list_insert(obj_hand.hand, self.position, self);
+    self.x = obj_hand.xx + self.position * global.card_offset;
+    self.y = obj_hand.yy;
+}
 else {
     selected = true;
-    with(obj_hand){
-        selected_count += 1;
-    }
+    global.selected_count += 1;
+    ds_list_insert(obj_hand.hand, self.position, noone);
+    self.x = obj_queue.xx + ds_list_size(obj_queue.queue) * global.card_offset;
+    self.y = obj_queue.yy;
+    ds_list_add(obj_queue.queue, self);
 }
 </string>
           </argument>

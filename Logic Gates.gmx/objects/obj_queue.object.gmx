@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Initialize spell stack
+            <string>queue = ds_list_create();
 
-stack = ds_stack_create();
-
+xx = 120;
+yy = 480;
 </string>
           </argument>
         </arguments>

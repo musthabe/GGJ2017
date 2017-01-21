@@ -11,8 +11,11 @@
     <sprite>sprites\spr_card</sprite>
     <sprite>sprites\spr_draw_button</sprite>
     <sprite>sprites\spr_attack_button</sprite>
+    <sprite>sprites\spr_operator</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_draw_hand.gml</script>
@@ -31,7 +34,6 @@
   <objects name="objects">
     <object>objects\obj_draw_button</object>
     <object>objects\obj_hand</object>
-    <object>objects\obj_stack</object>
     <object>objects\obj_attack_button</object>
     <object>objects\obj_turn_controller</object>
     <objects name="cards">
@@ -46,6 +48,8 @@
     <object>objects\obj_enemy</object>
     <object>objects\obj_game_over_menu</object>
     <object>objects\obj_timer</object>
+    <object>objects\obj_operator</object>
+    <object>objects\obj_queue</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\testroom</room>
