@@ -45,6 +45,7 @@
       <sprite>sprites\spr_horny_white</sprite>
       <sprite>sprites\spr_horny_yellow</sprite>
     </sprites>
+    <sprite>sprites\spr_water_attack</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
