@@ -81,6 +81,8 @@
     <object>objects\obj_fade</object>
     <object>objects\obj_start_game</object>
     <object>objects\obj_quit_game</object>
+    <object>objects\obj_player_view</object>
+    <object>objects\obj_enemy_view</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_screen</room>
