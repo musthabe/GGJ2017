@@ -17,10 +17,27 @@
     <sprite>sprites\spr_start_game</sprite>
     <sprite>sprites\spr_quit_game</sprite>
     <sprite>sprites\spr_operator_and</sprite>
-    <sprite>sprites\spr_operator</sprite>
     <sprite>sprites\spr_player_idle</sprite>
     <sprite>sprites\spr_player_attack</sprite>
     <sprite>sprites\spr_enemy</sprite>
+    <sprites name="enemy_shroom">
+      <sprite>sprites\spr_shroom_yellowred_idle</sprite>
+      <sprite>sprites\spr_shroom_black_idle</sprite>
+      <sprite>sprites\spr_shroom_blackblue_idle</sprite>
+      <sprite>sprites\spr_shroom_blackred_idle</sprite>
+      <sprite>sprites\spr_shroom_blackyellow_idle</sprite>
+      <sprite>sprites\spr_shroom_blue_idle</sprite>
+      <sprite>sprites\spr_shroom_bluered_idle</sprite>
+      <sprite>sprites\spr_shroom_red_idle</sprite>
+      <sprite>sprites\spr_shroom_white_idle</sprite>
+      <sprite>sprites\spr_shroom_whiteblack_idle</sprite>
+      <sprite>sprites\spr_shroom_whiteblue_idle</sprite>
+      <sprite>sprites\spr_shroom_whitered_idle</sprite>
+      <sprite>sprites\spr_shroom_whiteyellow_idle</sprite>
+      <sprite>sprites\spr_shroom_yellow_idle</sprite>
+      <sprite>sprites\spr_shroom_yellowblue_idle</sprite>
+      <sprite>sprites\spr_operator</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
