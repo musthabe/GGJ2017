@@ -80,22 +80,27 @@ else {
           <argument>
             <kind>1</kind>
             <string>q_pos=-1
+
 if selected {
     selected = false;
     global.selected_count -= 1;
-    q_pos=ds_list_find_index(obj_queue.queue, self)
+    q_pos=ds_list_find_index(obj_queue.queue, self);
+      show_debug_message("q position:" + string(q_pos));
     ds_list_delete(obj_queue.queue, q_pos);
     ds_list_insert(obj_hand.hand, self.position, self);
     self.x = obj_hand.xx + self.position * global.card_offset;
     self.y = obj_hand.yy;
 }
 else {
-    selected = true;
-    global.selected_count += 1;
-    ds_list_insert(obj_hand.hand, self.position, noone);
-    self.x = obj_queue.xx + ds_list_size(obj_queue.queue) * global.card_offset;
-    self.y = obj_queue.yy;
-    ds_list_add(obj_queue.queue, self);
+    if(ds_list_size(obj_queue.queue)!=2){
+        selected = true;
+        global.selected_count += 1;
+        ds_list_insert(obj_hand.hand, self.position, noone);
+        self.x = obj_queue.xx + ds_list_size(obj_queue.queue) * global.card_offset;
+        self.y = obj_queue.yy;
+        show_debug_message("q position:" + string(q_pos));
+        ds_list_add(obj_queue.queue, self);
+    }
 }
 
 
@@ -117,8 +122,10 @@ if not selected and (q_size &gt;= 1){
     op_pos=max(0,q_pos-1)
     op= ds_list_find_value(obj_queue.operators, op_pos);
     
-    ds_list_delete(obj_queue.operators, op_pos);
-    with(op){instance_destroy();}
+    if(ds_list_size(obj_queue.queue)!=2){
+        ds_list_delete(obj_queue.operators, op_pos);
+        with(op){instance_destroy();}
+    }
 }
 </string>
           </argument>
