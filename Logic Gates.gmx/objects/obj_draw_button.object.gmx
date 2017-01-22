@@ -82,7 +82,10 @@ global.selected_count = 0;
 with(obj_operator){instance_destroy()}
 
 
-scr_new_wave();
+//scr_new_wave();
+ds_list_clear(obj_queue.queue);
+ds_list_clear(obj_queue.operators);
+ds_list_clear(obj_hand.hand);
 </string>
           </argument>
         </arguments>

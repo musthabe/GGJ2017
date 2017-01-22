@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>audio_stop_sound(menu_music);
+  <code>randomize();
+audio_stop_sound(menu_music);
 audio_play_sound(battle_music, 3, true);
 instance_create(800, 320 , obj_enemy);</code>
   <enableViews>0</enableViews>

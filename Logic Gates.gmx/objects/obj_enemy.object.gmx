@@ -31,9 +31,54 @@ image_speed = 0.08;
 
 hp = 4;
 atk = 1;
+redmap = ds_map_create()
+bluemap = ds_map_create()
+yellowmap = ds_map_create()
+whitemap = ds_map_create()
+blackmap = ds_map_create()
+
+map = ds_map_create();
+ds_map_add(map, RED, redmap);
+ds_map_add(redmap, BLUE, spr_shroom_bluered_idle);
+ds_map_add(redmap, BLACK, spr_shroom_blackred_idle);
+ds_map_add(redmap, YELLOW, spr_shroom_yellowred_idle);
+ds_map_add(redmap, WHITE, spr_shroom_whitered_idle);
+ds_map_add(redmap, RED, spr_shroom_red_idle);
+
+ds_map_add(map, BLUE, bluemap);
+ds_map_add(bluemap, BLUE, spr_shroom_blue_idle);
+ds_map_add(bluemap, BLACK, spr_shroom_blackblue_idle);
+ds_map_add(bluemap, YELLOW, spr_shroom_yellowblue_idle);
+ds_map_add(bluemap, WHITE, spr_shroom_whiteblue_idle);
+
+ds_map_add(map, YELLOW, yellowmap);
+ds_map_add(yellowmap, BLACK, spr_shroom_blackyellow_idle);
+ds_map_add(yellowmap, YELLOW, spr_shroom_yellow_idle);
+ds_map_add(yellowmap, WHITE, spr_shroom_whiteyellow_idle);
+
+ds_map_add(map, WHITE, whitemap );
+ds_map_add(whitemap, BLACK, spr_shroom_whiteblack_idle);
+ds_map_add(whitemap, WHITE, spr_shroom_white_idle);
+
+ds_map_add(map, BLACK, blackmap );
+ds_map_add(blackmap, BLACK, spr_shroom_black_idle);
+
+color = ds_list_create();
+
+ds_list_add(color, choose(RED, BLUE, YELLOW, WHITE, BLACK));
+ds_list_add(color, choose(RED, BLUE, YELLOW, WHITE, BLACK));
+
+ds_list_sort(color, true);
+
+rootmap = ds_map_find_value(map, ds_list_find_value(color,0));
+colorsprite = ds_map_find_value(rootmap, ds_list_find_value(color,1));
+
+sprite_index = colorsprite;
+
+
 
 // R - red, B - blue, K-black, Y-yellow, W-white
-color = choose(RED, BLUE, YELLOW, WHITE, BLACK,
+/*color = choose(RED, BLUE, YELLOW, WHITE, BLACK,
         RB, RK, RY, RW,
         BK, BY, BW,
         KY, KW,
@@ -60,12 +105,11 @@ switch (color)
     
     case YW: sprite_index = spr_shroom_whiteyellow_idle; break;
     
-    
-    
     default: sprite_index = spr_horny_white;
 }
  
 
+ds_list_create();*/
 </string>
           </argument>
         </arguments>

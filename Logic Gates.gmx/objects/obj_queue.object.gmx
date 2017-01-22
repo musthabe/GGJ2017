@@ -30,6 +30,8 @@ operators = ds_list_create();
 
 xx = 120;
 yy = 480;
+
+
 </string>
           </argument>
         </arguments>
