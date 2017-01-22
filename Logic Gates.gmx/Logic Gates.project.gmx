@@ -23,7 +23,9 @@
     <sprite>sprites\spr_logo_room</sprite>
     <sprite>sprites\spr_main_screen</sprite>
     <sprite>sprites\spr_start_game</sprite>
+    <sprite>sprites\spr_start_game_hover</sprite>
     <sprite>sprites\spr_quit_game</sprite>
+    <sprite>sprites\spr_quit_game_hover</sprite>
     <sprite>sprites\spr_operator_and</sprite>
     <sprite>sprites\spr_player_idle</sprite>
     <sprite>sprites\spr_player_attack</sprite>
@@ -56,6 +58,9 @@
     <sprite>sprites\spr_water_attack</sprite>
     <sprite>sprites\spr_attack_animation</sprite>
     <sprite>sprites\spr_continue</sprite>
+    <sprite>sprites\spr_continue_hover</sprite>
+    <sprite>sprites\spr_particle</sprite>
+    <sprite>sprites\spr_destroywall</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -104,6 +109,8 @@
     <object>objects\obj_quit_game</object>
     <object>objects\obj_player_view</object>
     <object>objects\obj_enemy_view</object>
+    <object>objects\obj_particle</object>
+    <object>objects\obj_destroywall</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_screen</room>
