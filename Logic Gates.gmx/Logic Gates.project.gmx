@@ -112,12 +112,13 @@
     <object>objects\obj_enemy_view</object>
     <object>objects\obj_particle</object>
     <object>objects\obj_destroywall</object>
+    <object>objects\goto_next_room</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_logo_first</room>
     <room>rooms\rm_main_screen</room>
     <room>rooms\testroom</room>
     <room>rooms\rm_game_over</room>
-    <room>rooms\rm_logo_first</room>
     <room>rooms\story_room</room>
   </rooms>
   <constants number="15">
