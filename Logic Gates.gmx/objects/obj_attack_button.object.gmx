@@ -75,18 +75,15 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 0;
-with(obj_hand){
-    selected_count = 0;
+            <string>if(ds_list_size(obj_queue.queue &gt; 0)){
+    audio_play_sound(spell_attack, 3, false);
+    image_index = 0;
+    with(obj_hand){
+        selected_count = 0;
+    }
+    
+    scr_new_wave();
 }
-
-show_debug_message("Card 0" + string(ds_list_find_value(obj_queue.queue, 0).color));
-show_debug_message("OP 0" + string(ds_list_find_value(obj_queue.queue, 0).op));
-
-
-
-
-scr_new_wave();
 
 </string>
           </argument>

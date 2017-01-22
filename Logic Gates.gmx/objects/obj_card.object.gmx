@@ -79,13 +79,14 @@ else {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>q_pos=-1
+            <string>audio_play_sound(select_card, 5, false);
+q_pos=-1
 
 if selected {
     selected = false;
     global.selected_count -= 1;
     q_pos=ds_list_find_index(obj_queue.queue, self);
-      show_debug_message("q position:" + string(q_pos));
+    show_debug_message("q position:" + string(q_pos));
     ds_list_delete(obj_queue.queue, q_pos);
     ds_list_insert(obj_hand.hand, self.position, self);
     self.x = obj_hand.xx + self.position * global.card_offset;
@@ -98,7 +99,7 @@ else {
         ds_list_insert(obj_hand.hand, self.position, noone);
         self.x = obj_queue.xx + ds_list_size(obj_queue.queue) * global.card_offset;
         self.y = obj_queue.yy;
-        show_debug_message("q position:" + string(q_pos));
+        show_debug_message("queue number:" + string(ds_list_size(obj_queue.queue)));
         ds_list_add(obj_queue.queue, self);
     }
 }
