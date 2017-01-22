@@ -81,6 +81,7 @@ global.selected_count = 0;
 with(obj_operator){instance_destroy()}
 
 
+scr_new_wave();
 </string>
           </argument>
         </arguments>

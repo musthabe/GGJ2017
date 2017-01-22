@@ -79,6 +79,8 @@ image_speed = 0;
 with(obj_hand){
     selected_count = 0;
 }
+scr_new_wave();
+
 </string>
           </argument>
         </arguments>
@@ -104,14 +106,14 @@ with(obj_hand){
             <string>///End player turn
 
 if (position_meeting(mouse_x,mouse_y,self)){
-    global.player_turn = false;
     image_index = 1;
 }
 
 else {
     image_index = 0;
-    
 }
+
+
 </string>
           </argument>
         </arguments>

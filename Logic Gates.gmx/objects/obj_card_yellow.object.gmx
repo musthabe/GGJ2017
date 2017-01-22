@@ -28,6 +28,7 @@
             <string>image_index = 2;
 image_speed = 0;
 selected=false;
+color = YELLOW;
 </string>
           </argument>
         </arguments>
