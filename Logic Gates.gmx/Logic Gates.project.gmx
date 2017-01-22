@@ -9,6 +9,7 @@
     <sprite>sprites\spr_card_back</sprite>
     <sprite>sprites\spr_deck</sprite>
     <sprite>sprites\spr_card</sprite>
+    <sprite>sprites\spr_operator</sprite>
     <sprite>sprites\spr_draw_button</sprite>
     <sprite>sprites\spr_attack_button</sprite>
     <sprite>sprites\spr_operator_or</sprite>
@@ -36,7 +37,6 @@
       <sprite>sprites\spr_shroom_whiteyellow_idle</sprite>
       <sprite>sprites\spr_shroom_yellow_idle</sprite>
       <sprite>sprites\spr_shroom_yellowblue_idle</sprite>
-      <sprite>sprites\spr_operator</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -57,6 +57,7 @@
       <script>scripts\state_update.gml</script>
     </scripts>
     <script>scripts\scr_enemy_attack.gml</script>
+    <script>scripts\cards_colors.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_draw_button</object>

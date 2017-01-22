@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>image_index = 3;
 image_speed = 0;
+color = cardscolors.white;
 selected=false;
 </string>
           </argument>
