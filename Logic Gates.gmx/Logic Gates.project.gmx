@@ -66,6 +66,7 @@
     <background>background\background0</background>
     <background>background\bg_main_screen</background>
     <background>background\bg_story</background>
+    <background>background\game_over</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
