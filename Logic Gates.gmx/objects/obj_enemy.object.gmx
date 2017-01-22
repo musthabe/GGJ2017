@@ -43,22 +43,22 @@ ds_map_add(redmap, BLUE, spr_shroom_bluered_idle);
 ds_map_add(redmap, BLACK, spr_shroom_blackred_idle);
 ds_map_add(redmap, YELLOW, spr_shroom_yellowred_idle);
 ds_map_add(redmap, WHITE, spr_shroom_whitered_idle);
-ds_map_add(redmap, RED, spr_shroom_red_idle);
+ds_map_add(redmap, RED, spr_horny_red);
 
 ds_map_add(map, BLUE, bluemap);
-ds_map_add(bluemap, BLUE, spr_shroom_blue_idle);
+ds_map_add(bluemap, BLUE, spr_horny_blue);
 ds_map_add(bluemap, BLACK, spr_shroom_blackblue_idle);
 ds_map_add(bluemap, YELLOW, spr_shroom_yellowblue_idle);
 ds_map_add(bluemap, WHITE, spr_shroom_whiteblue_idle);
 
 ds_map_add(map, YELLOW, yellowmap);
 ds_map_add(yellowmap, BLACK, spr_shroom_blackyellow_idle);
-ds_map_add(yellowmap, YELLOW, spr_shroom_yellow_idle);
+ds_map_add(yellowmap, YELLOW, spr_horny_yellow);
 ds_map_add(yellowmap, WHITE, spr_shroom_whiteyellow_idle);
 
 ds_map_add(map, WHITE, whitemap );
 ds_map_add(whitemap, BLACK, spr_shroom_whiteblack_idle);
-ds_map_add(whitemap, WHITE, spr_shroom_white_idle);
+ds_map_add(whitemap, WHITE, spr_horny_white);
 
 ds_map_add(map, BLACK, blackmap );
 ds_map_add(blackmap, BLACK, spr_shroom_black_idle);

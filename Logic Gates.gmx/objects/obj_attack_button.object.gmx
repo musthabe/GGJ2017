@@ -105,6 +105,9 @@ image_speed = 0;
     if (op == 0){
         if c1 == en1 and c2 == en2 {
             scr_new_wave();
+            with(obj_card){instance_destroy();}
+            with(obj_operator){instance_destroy();}
+            scr_draw_hand();
         }
         
     }
@@ -112,6 +115,9 @@ image_speed = 0;
     else{
         if (c1 == en1 or c1 == en2 or c2 == en1 or c2 == en2) {
             scr_new_wave();
+            with(obj_card){instance_destroy();}
+            with(obj_operator){instance_destroy();}
+            scr_draw_hand();
         }
     }
     

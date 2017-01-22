@@ -2,7 +2,7 @@
 
 //create a new encounter
 
-
+global.selected_count = 0;
 with (obj_enemy) {
     instance_destroy();
 }
