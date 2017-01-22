@@ -79,6 +79,13 @@ image_speed = 0;
 with(obj_hand){
     selected_count = 0;
 }
+
+show_debug_message("Card 0" + string(ds_list_find_value(obj_queue.queue, 0).color));
+show_debug_message("OP 0" + string(ds_list_find_value(obj_queue.queue, 0).op));
+
+
+
+
 scr_new_wave();
 
 </string>
