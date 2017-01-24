@@ -129,7 +129,7 @@ image_speed = 0;
 
 //remove hp after attack
 obj_player_view.hp_current -= 10;
-audio_play_sound(asset_get_index("player_hit" + string(irandom_range(1, 4))), 4, false);
+audio_play_sound(asset_get_index("player_hit" + string(irandom_range(1, 6))), 4, false);
 audio_play_sound(taking_damage_sfx, 3, false);
 
 //reset attack clock

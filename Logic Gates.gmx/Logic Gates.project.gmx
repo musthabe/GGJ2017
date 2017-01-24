@@ -23,14 +23,16 @@
       <sound>sound\battle_music</sound>
       <sound>sound\menu_music</sound>
     </sounds>
+    <sound>sound\player_hit1</sound>
     <sounds name="attacks">
       <sound>sound\spell_attack</sound>
+      <sound>sound\player_hit2</sound>
+      <sound>sound\player_hit3</sound>
+      <sound>sound\player_hit4</sound>
+      <sound>sound\player_hit5</sound>
+      <sound>sound\player_hit6</sound>
+      <sound>sound\taking_damage_sfx</sound>
     </sounds>
-    <sound>sound\taking_damage_sfx</sound>
-    <sound>sound\player_hit1</sound>
-    <sound>sound\player_hit2</sound>
-    <sound>sound\player_hit3</sound>
-    <sound>sound\player_hit4</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_card_back</sprite>
