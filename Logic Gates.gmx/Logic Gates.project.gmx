@@ -5,14 +5,25 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\button_select_quit</sound>
-    <sound>sound\button_select_start</sound>
-    <sound>sound\menu_music</sound>
-    <sound>sound\battle_music</sound>
-    <sound>sound\draw_cards</sound>
-    <sound>sound\select_card</sound>
+    <sounds name="monster_sounds">
+      <sound>sound\monster_dies1</sound>
+      <sound>sound\monster_dies2</sound>
+      <sound>sound\monster_dies3</sound>
+      <sound>sound\monster_dies4</sound>
+      <sound>sound\monster_dies5</sound>
+    </sounds>
+    <sounds name="misc_sounds_like_UI">
+      <sound>sound\button_select_quit</sound>
+      <sound>sound\death</sound>
+      <sound>sound\button_select_start</sound>
+      <sound>sound\draw_cards</sound>
+      <sound>sound\select_card</sound>
+    </sounds>
+    <sounds name="music">
+      <sound>sound\battle_music</sound>
+      <sound>sound\menu_music</sound>
+    </sounds>
     <sound>sound\spell_attack</sound>
-    <sound>sound\death</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_card_back</sprite>
