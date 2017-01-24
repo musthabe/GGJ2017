@@ -26,6 +26,66 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0.09;
+hp_max = 100;
+hp_current = hp_max;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(hp_current &lt;= 0){
+    audio_stop_sound(battle_music);
+    audio_play_sound(death, 3, false);
+    room_goto(rm_game_over);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var perc;
+var playerx = obj_player_view.x;
+var playery = obj_player_view.y;
+perc = (obj_player_view.hp_current / obj_player_view.hp_max) * 100;
+draw_self();
+draw_set_color(c_yellow);
+draw_healthbar(playerx - 50, playery - 100, playerx + 50, playery - 80, perc, c_black, c_maroon, c_green, 0, true, true)
+draw_text_ext(playerx - 42, playery - 96, string(obj_player_view.hp_current) + " / " + string(obj_player_view.hp_max), 3, 300);
+
 </string>
           </argument>
         </arguments>

@@ -127,6 +127,8 @@ image_speed = 0;
     
 }
 
+//remove hp after attack
+obj_player_view.hp_current -= 10;
 </string>
           </argument>
         </arguments>
