@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>if(mouse_check_button_released(mb_left)){
-    game_end();
+    room_goto(testroom);
+    //game_end();
 }
 </string>
           </argument>

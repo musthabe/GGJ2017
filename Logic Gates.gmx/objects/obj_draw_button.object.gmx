@@ -75,7 +75,7 @@
             <kind>1</kind>
             <string>audio_play_sound(draw_cards, 4, false);
 image_index = 0;
-instance_create(x,y,obj_timer);
+//instance_create(x,y,obj_timer);
 
 global.selected_count = 0;
 

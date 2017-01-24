@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>myTime = 30;
+            <string>myTime = 10;
 </string>
           </argument>
         </arguments>
@@ -51,9 +51,8 @@
             <string>    if(myTime&gt;0){
       myTime -= delta_time/1000000 
     }else {
-        myTime = 0;
-        global.player_dead = true;
-        room_goto(rm_game_over);
+        obj_player_view.hp_current -= 20;    
+        myTime = 10;  
     }
     
     showTime = ceil(myTime)
@@ -80,7 +79,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(window_get_width()/2,10,string(floor(showTime)));
+            <string>draw_set_color(c_white);
+draw_text(window_get_width()/2,10,string(floor(showTime)));
 </string>
           </argument>
         </arguments>
