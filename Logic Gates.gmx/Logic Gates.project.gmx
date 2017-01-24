@@ -23,7 +23,14 @@
       <sound>sound\battle_music</sound>
       <sound>sound\menu_music</sound>
     </sounds>
-    <sound>sound\spell_attack</sound>
+    <sounds name="attacks">
+      <sound>sound\spell_attack</sound>
+    </sounds>
+    <sound>sound\taking_damage_sfx</sound>
+    <sound>sound\player_hit1</sound>
+    <sound>sound\player_hit2</sound>
+    <sound>sound\player_hit3</sound>
+    <sound>sound\player_hit4</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_card_back</sprite>
@@ -93,8 +100,8 @@
       <script>scripts\state_switch_previous.gml</script>
       <script>scripts\state_update.gml</script>
     </scripts>
-    <script>scripts\scr_enemy_attack.gml</script>
     <script>scripts\scr_new_wave.gml</script>
+    <script>scripts\scr_enemy_attack.gml</script>
   </scripts>
   <fonts name="fonts"/>
   <objects name="objects">
