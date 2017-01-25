@@ -35,53 +35,71 @@
     </sounds>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_card_back</sprite>
-    <sprite>sprites\spr_deck</sprite>
-    <sprite>sprites\spr_card</sprite>
-    <sprite>sprites\spr_draw_button</sprite>
-    <sprite>sprites\spr_attack_button</sprite>
-    <sprite>sprites\spr_operator_or</sprite>
-    <sprite>sprites\spr_logo_room</sprite>
-    <sprite>sprites\spr_main_screen</sprite>
-    <sprite>sprites\spr_start_game</sprite>
-    <sprite>sprites\spr_start_game_hover</sprite>
-    <sprite>sprites\spr_quit_game</sprite>
-    <sprite>sprites\spr_quit_game_hover</sprite>
-    <sprite>sprites\spr_operator_and</sprite>
-    <sprite>sprites\spr_player_idle</sprite>
-    <sprite>sprites\spr_player_attack</sprite>
-    <sprite>sprites\spr_enemy</sprite>
-    <sprites name="enemy_shroom">
-      <sprite>sprites\spr_shroom_yellowred_idle</sprite>
-      <sprite>sprites\spr_shroom_black_idle</sprite>
-      <sprite>sprites\spr_shroom_blackblue_idle</sprite>
-      <sprite>sprites\spr_shroom_blackred_idle</sprite>
-      <sprite>sprites\spr_shroom_blackyellow_idle</sprite>
-      <sprite>sprites\spr_shroom_blue_idle</sprite>
-      <sprite>sprites\spr_shroom_bluered_idle</sprite>
-      <sprite>sprites\spr_shroom_red_idle</sprite>
-      <sprite>sprites\spr_shroom_white_idle</sprite>
-      <sprite>sprites\spr_shroom_whiteblack_idle</sprite>
-      <sprite>sprites\spr_shroom_whiteblue_idle</sprite>
-      <sprite>sprites\spr_shroom_whitered_idle</sprite>
-      <sprite>sprites\spr_shroom_whiteyellow_idle</sprite>
-      <sprite>sprites\spr_shroom_yellow_idle</sprite>
-      <sprite>sprites\spr_shroom_yellowblue_idle</sprite>
-      <sprite>sprites\spr_operator</sprite>
+    <sprites name="Card">
+      <sprite>sprites\spr_card</sprite>
+      <sprite>sprites\spr_card_back</sprite>
+      <sprite>sprites\spr_deck</sprite>
     </sprites>
-    <sprite>sprites\sprite30</sprite>
-    <sprites name="enemy_horny">
-      <sprite>sprites\spr_horny_blue</sprite>
-      <sprite>sprites\spr_horny_red</sprite>
-      <sprite>sprites\spr_horny_white</sprite>
-      <sprite>sprites\spr_horny_yellow</sprite>
+    <sprites name="Character">
+      <sprites name="Player">
+        <sprite>sprites\spr_player_attack</sprite>
+        <sprite>sprites\spr_player_idle</sprite>
+      </sprites>
+      <sprites name="Enemy">
+        <sprites name="enemy_horny">
+          <sprite>sprites\spr_horny_blue</sprite>
+          <sprite>sprites\spr_horny_red</sprite>
+          <sprite>sprites\spr_horny_white</sprite>
+          <sprite>sprites\spr_horny_yellow</sprite>
+        </sprites>
+        <sprites name="enemy_shroom">
+          <sprite>sprites\spr_shroom_yellowred_idle</sprite>
+          <sprite>sprites\spr_shroom_black_idle</sprite>
+          <sprite>sprites\spr_shroom_blackblue_idle</sprite>
+          <sprite>sprites\spr_shroom_blackred_idle</sprite>
+          <sprite>sprites\spr_shroom_blackyellow_idle</sprite>
+          <sprite>sprites\spr_shroom_blue_idle</sprite>
+          <sprite>sprites\spr_shroom_bluered_idle</sprite>
+          <sprite>sprites\spr_shroom_red_idle</sprite>
+          <sprite>sprites\spr_shroom_white_idle</sprite>
+          <sprite>sprites\spr_shroom_whiteblack_idle</sprite>
+          <sprite>sprites\spr_shroom_whiteblue_idle</sprite>
+          <sprite>sprites\spr_shroom_whitered_idle</sprite>
+          <sprite>sprites\spr_shroom_whiteyellow_idle</sprite>
+          <sprite>sprites\spr_shroom_yellow_idle</sprite>
+          <sprite>sprites\spr_shroom_yellowblue_idle</sprite>
+        </sprites>
+        <sprite>sprites\spr_enemy</sprite>
+        <sprite>sprites\sprite30</sprite>
+      </sprites>
     </sprites>
-    <sprite>sprites\spr_water_attack</sprite>
-    <sprite>sprites\spr_attack_animation</sprite>
-    <sprite>sprites\spr_continue</sprite>
-    <sprite>sprites\spr_continue_hover</sprite>
-    <sprite>sprites\spr_particle</sprite>
-    <sprite>sprites\spr_destroywall</sprite>
+    <sprites name="FX">
+      <sprite>sprites\spr_water_attack</sprite>
+      <sprite>sprites\spr_attack_animation</sprite>
+      <sprite>sprites\spr_destroywall</sprite>
+    </sprites>
+    <sprites name="GUI">
+      <sprites name="Menu buttons">
+        <sprite>sprites\spr_start_game_hover</sprite>
+        <sprite>sprites\spr_quit_game_hover</sprite>
+        <sprite>sprites\spr_continue_hover</sprite>
+        <sprite>sprites\spr_continue</sprite>
+        <sprite>sprites\spr_quit_game</sprite>
+        <sprite>sprites\spr_start_game</sprite>
+      </sprites>
+      <sprites name="Game buttons">
+        <sprite>sprites\spr_attack_button</sprite>
+        <sprite>sprites\spr_operator_or</sprite>
+        <sprite>sprites\spr_operator</sprite>
+        <sprite>sprites\spr_draw_button</sprite>
+        <sprite>sprites\spr_operator_and</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Logo">
+      <sprite>sprites\spr_main_screen</sprite>
+      <sprite>sprites\spr_logo_room</sprite>
+      <sprite>sprites\spr_particle</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -91,19 +109,21 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_draw_hand.gml</script>
-    <scripts name="FSMScripts">
-      <script>scripts\state_machine_init.gml</script>
-      <script>scripts\state_create.gml</script>
-      <script>scripts\state_cleanup.gml</script>
-      <script>scripts\state_execute.gml</script>
-      <script>scripts\state_init.gml</script>
-      <script>scripts\state_switch.gml</script>
-      <script>scripts\state_switch_previous.gml</script>
-      <script>scripts\state_update.gml</script>
+    <scripts name="Old stuff">
+      <script>scripts\scr_draw_hand.gml</script>
+      <script>scripts\scr_enemy_attack.gml</script>
+      <script>scripts\scr_new_wave.gml</script>
+      <scripts name="FSMScripts">
+        <script>scripts\state_machine_init.gml</script>
+        <script>scripts\state_create.gml</script>
+        <script>scripts\state_cleanup.gml</script>
+        <script>scripts\state_execute.gml</script>
+        <script>scripts\state_init.gml</script>
+        <script>scripts\state_switch.gml</script>
+        <script>scripts\state_switch_previous.gml</script>
+        <script>scripts\state_update.gml</script>
+      </scripts>
     </scripts>
-    <script>scripts\scr_new_wave.gml</script>
-    <script>scripts\scr_enemy_attack.gml</script>
     <scripts name="States">
       <scripts name="Player">
         <script>scripts\state_player_turn.gml</script>
@@ -120,6 +140,9 @@
       <scripts name="Hand">
         <script>scripts\state_card_selected.gml</script>
         <script>scripts\state_card_deselected.gml</script>
+      </scripts>
+      <scripts name="System">
+        <script>scripts\state_room_initalize.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -156,6 +179,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\new_testroom</room>
     <room>rooms\testroom</room>
     <room>rooms\rm_logo_first</room>
     <room>rooms\rm_main_screen</room>
