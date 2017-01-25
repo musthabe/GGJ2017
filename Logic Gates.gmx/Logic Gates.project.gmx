@@ -132,6 +132,7 @@
       <scripts name="Enemy">
         <script>scripts\state_enemy_turn.gml</script>
         <script>scripts\state_enemy_attack.gml</script>
+        <script>scripts\state_new_enemy.gml</script>
       </scripts>
       <scripts name="Queue">
         <script>scripts\state_queue_activated.gml</script>
@@ -143,6 +144,8 @@
       </scripts>
       <scripts name="System">
         <script>scripts\state_room_initalize.gml</script>
+        <script>scripts\state_next_room.gml</script>
+        <script>scripts\state_break_menu.gml</script>
       </scripts>
     </scripts>
   </scripts>
