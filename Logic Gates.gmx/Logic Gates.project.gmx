@@ -104,37 +104,56 @@
     </scripts>
     <script>scripts\scr_new_wave.gml</script>
     <script>scripts\scr_enemy_attack.gml</script>
+    <scripts name="States">
+      <scripts name="Player">
+        <script>scripts\state_player_turn.gml</script>
+        <script>scripts\state_player_attack.gml</script>
+      </scripts>
+      <scripts name="Enemy">
+        <script>scripts\state_enemy_turn.gml</script>
+        <script>scripts\state_enemy_attack.gml</script>
+      </scripts>
+      <scripts name="Queue">
+        <script>scripts\state_queue_activated.gml</script>
+        <script>scripts\state_queue_deactivated.gml</script>
+      </scripts>
+      <scripts name="Hand">
+        <script>scripts\state_card_selected.gml</script>
+        <script>scripts\state_card_deselected.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
-  <fonts name="fonts"/>
   <objects name="objects">
-    <object>objects\obj_draw_button</object>
-    <object>objects\obj_hand</object>
-    <object>objects\obj_attack_button</object>
-    <object>objects\obj_turn_controller</object>
-    <objects name="cards">
-      <object>objects\obj_card</object>
-      <object>objects\obj_card_blue</object>
-      <object>objects\obj_card_white</object>
-      <object>objects\obj_card_black</object>
-      <object>objects\obj_card_yellow</object>
-      <object>objects\obj_card_red</object>
+    <objects name="Old stuff">
+      <objects name="cards">
+        <object>objects\obj_card</object>
+        <object>objects\obj_card_black</object>
+        <object>objects\obj_card_blue</object>
+        <object>objects\obj_card_red</object>
+        <object>objects\obj_card_white</object>
+        <object>objects\obj_card_yellow</object>
+      </objects>
+      <object>objects\goto_next_room</object>
+      <object>objects\obj_attack_button</object>
+      <object>objects\obj_continue</object>
+      <object>objects\obj_destroywall</object>
+      <object>objects\obj_draw_button</object>
+      <object>objects\obj_enemy</object>
+      <object>objects\obj_enemy_view</object>
+      <object>objects\obj_fade</object>
+      <object>objects\obj_game_over_menu</object>
+      <object>objects\obj_hand</object>
+      <object>objects\obj_logo_room</object>
+      <object>objects\obj_operator</object>
+      <object>objects\obj_particle</object>
+      <object>objects\obj_player</object>
+      <object>objects\obj_player_view</object>
+      <object>objects\obj_queue</object>
+      <object>objects\obj_quit_game</object>
+      <object>objects\obj_start_game</object>
+      <object>objects\obj_timer</object>
+      <object>objects\obj_turn_controller</object>
     </objects>
-    <object>objects\obj_player</object>
-    <object>objects\obj_enemy</object>
-    <object>objects\obj_game_over_menu</object>
-    <object>objects\obj_timer</object>
-    <object>objects\obj_operator</object>
-    <object>objects\obj_queue</object>
-    <object>objects\obj_logo_room</object>
-    <object>objects\obj_fade</object>
-    <object>objects\obj_start_game</object>
-    <object>objects\obj_continue</object>
-    <object>objects\obj_quit_game</object>
-    <object>objects\obj_player_view</object>
-    <object>objects\obj_enemy_view</object>
-    <object>objects\obj_particle</object>
-    <object>objects\obj_destroywall</object>
-    <object>objects\goto_next_room</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\testroom</room>
