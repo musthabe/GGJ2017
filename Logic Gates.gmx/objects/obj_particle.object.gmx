@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>image_speed = 0; 
 image_index = irandom(7);
+random_scale = random_range(0.05, 1);
+image_xscale = random_scale;
+image_yscale = random_scale;
 </string>
           </argument>
         </arguments>
@@ -49,7 +52,7 @@ image_index = irandom(7);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_towards_point(0, y, 5);
+            <string>move_towards_point(-64, y, 5);
 </string>
           </argument>
         </arguments>

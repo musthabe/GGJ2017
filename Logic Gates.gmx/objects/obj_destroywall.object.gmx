@@ -51,10 +51,8 @@
             <string>show_debug_message("timer value: " + string(timer));    
 if (timer &lt;= 0) {
   instance_create(1122, random(room_height), obj_particle);
-  show_debug_message("CREATING OBJECT");
-  timer = random_range(10,120);
+  timer = irandom_range(10,90);
 } else {
-show_debug_message("removing -1");
   timer -= 1;
 }
 </string>
