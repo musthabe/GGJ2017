@@ -147,9 +147,17 @@
     </scripts>
   </scripts>
   <objects name="objects">
+    <objects name="Cards">
+      <object>objects\obj_card</object>
+      <object>objects\obj_deck</object>
+    </objects>
+    <objects name="Characters">
+      <object>objects\obj_player</object>
+      <object>objects\obj_enemy</object>
+    </objects>
     <objects name="Old stuff">
       <objects name="cards">
-        <object>objects\obj_card</object>
+        <object>objects\obj_card_old</object>
         <object>objects\obj_card_black</object>
         <object>objects\obj_card_blue</object>
         <object>objects\obj_card_red</object>
@@ -161,17 +169,17 @@
       <object>objects\obj_continue</object>
       <object>objects\obj_destroywall</object>
       <object>objects\obj_draw_button</object>
-      <object>objects\obj_enemy</object>
+      <object>objects\obj_enemy_old</object>
       <object>objects\obj_enemy_view</object>
       <object>objects\obj_fade</object>
       <object>objects\obj_game_over_menu</object>
       <object>objects\obj_hand</object>
       <object>objects\obj_logo_room</object>
       <object>objects\obj_operator</object>
-      <object>objects\obj_particle</object>
-      <object>objects\obj_player</object>
-      <object>objects\obj_player_view</object>
       <object>objects\obj_queue</object>
+      <object>objects\obj_particle</object>
+      <object>objects\obj_player_old</object>
+      <object>objects\obj_player_view</object>
       <object>objects\obj_quit_game</object>
       <object>objects\obj_start_game</object>
       <object>objects\obj_timer</object>
