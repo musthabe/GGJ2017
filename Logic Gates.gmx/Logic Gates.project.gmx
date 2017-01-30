@@ -99,6 +99,7 @@
       <sprite>sprites\spr_main_screen</sprite>
       <sprite>sprites\spr_logo_room</sprite>
       <sprite>sprites\spr_particle</sprite>
+      <sprite>sprites\spr_studio_logo</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -132,6 +133,7 @@
       <scripts name="Enemy">
         <script>scripts\state_enemy_turn.gml</script>
         <script>scripts\state_enemy_attack.gml</script>
+        <script>scripts\state_new_enemy.gml</script>
       </scripts>
       <scripts name="Queue">
         <script>scripts\state_queue_activated.gml</script>
@@ -143,6 +145,8 @@
       </scripts>
       <scripts name="System">
         <script>scripts\state_room_initalize.gml</script>
+        <script>scripts\state_next_room.gml</script>
+        <script>scripts\state_break_menu.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -184,12 +188,13 @@
       <object>objects\obj_start_game</object>
       <object>objects\obj_timer</object>
       <object>objects\obj_turn_controller</object>
+      <object>objects\obj_studio_logo</object>
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_logo_first</room>
     <room>rooms\new_testroom</room>
     <room>rooms\testroom</room>
-    <room>rooms\rm_logo_first</room>
     <room>rooms\rm_main_screen</room>
     <room>rooms\rm_game_over</room>
     <room>rooms\story_room</room>
