@@ -75,42 +75,6 @@ rootmap = ds_map_find_value(map, ds_list_find_value(color,0));
 colorsprite = ds_map_find_value(rootmap, ds_list_find_value(color,1));
 
 sprite_index = colorsprite;
-
-
-
-// R - red, B - blue, K-black, Y-yellow, W-white
-/*color = choose(RED, BLUE, YELLOW, WHITE, BLACK,
-        RB, RK, RY, RW,
-        BK, BY, BW,
-        KY, KW,
-        YW);
-
-switch (color)
-{
-    case RED: sprite_index = spr_horny_red; break;
-    case BLUE: sprite_index = spr_horny_blue; break;
-    case YELLOW: sprite_index = spr_horny_yellow; break;
-    case WHITE: sprite_index = spr_horny_white; break;
-    
-    case RB: sprite_index = spr_shroom_bluered_idle; break;
-    case RK: sprite_index = spr_shroom_blackred_idle; break;
-    case RY: sprite_index = spr_shroom_yellowred_idle; break;
-    case RW: sprite_index = spr_shroom_whitered_idle; break;
-    
-    case BK: sprite_index = spr_shroom_blackblue_idle; break;
-    case BY: sprite_index = spr_shroom_blackyellow_idle; break;
-    case BW: sprite_index = spr_shroom_whiteblue_idle; break;
-    
-    case KY: sprite_index = spr_shroom_blackyellow_idle; break;
-    case KW: sprite_index = spr_shroom_whiteblack_idle; break;
-    
-    case YW: sprite_index = spr_shroom_whiteyellow_idle; break;
-    
-    default: sprite_index = spr_horny_white;
-}
- 
-
-ds_list_create();*/
 </string>
           </argument>
         </arguments>

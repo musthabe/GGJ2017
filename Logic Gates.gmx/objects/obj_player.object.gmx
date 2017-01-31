@@ -31,9 +31,10 @@
 image_speed = 3/room_speed;
 
 //Stats
-hp  = 0;
-def = 0;
-atk = 0;
+hp_max  = 0;
+hp      = 0;
+def     = 0;
+atk     = 0;
 
 //Skills
 red_skill    = 0;

@@ -25,18 +25,112 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Initialize enemy object
+            <string>///Initialize enemy object 
 
 //Animation
 image_speed = 3/room_speed;
 
 //Stats
+hp_max  = 0;
 hp      = 0;
 atk     = 0;
-color   = 0;
 
 //Skills
-skills = ds_list_create();
+//skills = ds_list_create();
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Set enemy color
+
+/*
+If we use this system, then evry monster type will have to have this
+whole thing in their object and the sprite indexes must be changed accordingly
+
+The idea is as follows:
+MAP is the main map, the first color.
+The second color comes from the REDMAP, BLUEMAP, etc.
+If both are the same then the monster only has one color.
+
+To decide what color a monster is, we basically need two keys
+Keys are called RED; BLUE; YELLOW; WHITE; BLACK;
+But that is because they are written as macros: 0, 1, 2, 3, 4 accordingly
+So basically it is something like a matrix.
+A yellow-black monster is logically MAP[YELLOW][BLACK] or MAP[BLACK][YELLOW]
+
+Because the key YELLOW takes us to the value YELLOWMAP under the map MAP
+and the key BLACK will then return the value of spr_monster_yellow_black
+from the map YELLOWMAP
+
+Will probably need a better sprite structuring system though...
+*/
+
+//First the main map that will contain submaps of colors
+map = ds_map_create();
+
+//Then, create maps for all the colors
+redmap = ds_map_create()
+bluemap = ds_map_create()
+yellowmap = ds_map_create()
+whitemap = ds_map_create()
+blackmap = ds_map_create()
+
+//Fill the maps
+//Map key = color; map value = sprite;
+ds_map_add(map, RED, redmap);
+ds_map_add(redmap, BLUE, spr_shroom_bluered_idle);
+ds_map_add(redmap, BLACK, spr_shroom_blackred_idle);
+ds_map_add(redmap, YELLOW, spr_shroom_yellowred_idle);
+ds_map_add(redmap, WHITE, spr_shroom_whitered_idle);
+ds_map_add(redmap, RED, spr_horny_red);
+
+ds_map_add(map, BLUE, bluemap);
+ds_map_add(bluemap, BLUE, spr_horny_blue);
+ds_map_add(bluemap, BLACK, spr_shroom_blackblue_idle);
+ds_map_add(bluemap, YELLOW, spr_shroom_yellowblue_idle);
+ds_map_add(bluemap, WHITE, spr_shroom_whiteblue_idle);
+
+ds_map_add(map, YELLOW, yellowmap);
+ds_map_add(yellowmap, BLACK, spr_shroom_blackyellow_idle);
+ds_map_add(yellowmap, YELLOW, spr_horny_yellow);
+ds_map_add(yellowmap, WHITE, spr_shroom_whiteyellow_idle);
+
+ds_map_add(map, WHITE, whitemap );
+ds_map_add(whitemap, BLACK, spr_shroom_whiteblack_idle);
+ds_map_add(whitemap, WHITE, spr_horny_white);
+
+ds_map_add(map, BLACK, blackmap );
+ds_map_add(blackmap, BLACK, spr_shroom_black_idle);
+
+
+//Sort it all out and set it as the enemy sprite
+sprite_index = ds_list_sort(ds_list_find_value(ds_list_find_value(map, choose(RED, BLUE, YELLOW, WHITE, BLACK)), choose(RED, BLUE, YELLOW, WHITE, BLACK)), true);
+
+//And finally destory all the maps to avoid memory leak
+ds_map_destroy(map);
+ds_map_destroy(redmap);
+ds_map_destroy(bluemap);
+ds_map_destroy(yellowmap);
+ds_map_destroy(whitemap);
+ds_map_destroy(blackmap);
 </string>
           </argument>
         </arguments>
