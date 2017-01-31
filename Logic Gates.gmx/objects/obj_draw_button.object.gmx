@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0;
+            <string>///Initialize the draw button
+
+//Set animation speed to 0
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -48,7 +51,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (not position_meeting(mouse_x,mouse_y, self)){
+            <string>///Set the button graphics to normal when not pressed
+
+//While the mouse button is held down, use index 1
+if (position_meeting(mouse_x,mouse_y,self) and mouse_check_button(mb_left)){
+    image_index = 1;
+}
+
+//Else use index 0
+else{
     image_index = 0;
 }
 </string>
@@ -73,7 +84,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>audio_play_sound(draw_cards, 4, false);
+            <string>///Draw a new hand upon mouse release
+
+obj_state_controller.state = states.draw;
+
+
+/*
+audio_play_sound(draw_cards, 4, false);
 image_index = 0;
 //instance_create(x,y,obj_timer);
 
@@ -86,6 +103,7 @@ with(obj_operator){instance_destroy()}
 ds_list_clear(obj_queue.queue);
 ds_list_clear(obj_queue.operators);
 ds_list_clear(obj_hand.hand);
+*/
 </string>
           </argument>
         </arguments>
@@ -108,7 +126,10 @@ ds_list_clear(obj_hand.hand);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (position_meeting(mouse_x,mouse_y,self)){
+            <string>/*
+///If left mouse is pressed on button
+
+if (position_meeting(mouse_x,mouse_y,self)){
     //destroy all the cards on the field
     with(obj_card_blue){
         instance_destroy();
@@ -139,7 +160,7 @@ else {
     image_index = 0;
     
 }
-
+*/
 </string>
           </argument>
         </arguments>
