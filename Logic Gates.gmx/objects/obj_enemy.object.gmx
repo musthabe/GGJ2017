@@ -120,9 +120,18 @@ ds_map_add(whitemap, WHITE, spr_horny_white);
 ds_map_add(map, BLACK, blackmap );
 ds_map_add(blackmap, BLACK, spr_shroom_black_idle);
 
+//Temp list to sort and hold color information
+colorlist = ds_list_create();
+ds_list_add(colorlist, choose(RED, BLUE, YELLOW, WHITE, BLACK));
+ds_list_add(colorlist, choose(RED, BLUE, YELLOW, WHITE, BLACK));
+ds_list_sort(colorlist, true);
+
+//randomize for new random seed
+randomize();
 
 //Sort it all out and set it as the enemy sprite
-sprite_index = ds_list_sort(ds_list_find_value(ds_list_find_value(map, choose(RED, BLUE, YELLOW, WHITE, BLACK)), choose(RED, BLUE, YELLOW, WHITE, BLACK)), true);
+show_debug_message("sprite: " + string(ds_map_find_value(ds_map_find_value(map, choose(RED, BLUE, YELLOW, WHITE, BLACK)), choose(RED, BLUE, YELLOW, WHITE, BLACK))));
+sprite_index = ds_map_find_value(ds_map_find_value(map, ds_list_find_value(colorlist, 0)), ds_list_find_value(colorlist, 1));
 
 //And finally destory all the maps to avoid memory leak
 ds_map_destroy(map);
@@ -131,6 +140,7 @@ ds_map_destroy(bluemap);
 ds_map_destroy(yellowmap);
 ds_map_destroy(whitemap);
 ds_map_destroy(blackmap);
+ds_list_destroy(colorlist);
 </string>
           </argument>
         </arguments>
