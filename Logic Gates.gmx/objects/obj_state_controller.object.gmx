@@ -63,7 +63,7 @@ state = states.idle;
 if room == new_testroom{
     switch (state){
         case states.idle:   state_player_turn();break;
-        case states.draw:   state_player_draw();break;
+        case states.draw:   state_hand_draw();break;
         default:            state_player_turn();break;
     }
 }

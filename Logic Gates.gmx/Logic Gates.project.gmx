@@ -129,7 +129,6 @@
       <scripts name="Player">
         <script>scripts\state_player_turn.gml</script>
         <script>scripts\state_player_attack.gml</script>
-        <script>scripts\state_player_draw.gml</script>
       </scripts>
       <scripts name="Enemy">
         <script>scripts\state_enemy_turn.gml</script>
@@ -142,6 +141,7 @@
       </scripts>
       <scripts name="Hand">
         <script>scripts\state_card_selected.gml</script>
+        <script>scripts\state_hand_draw.gml</script>
         <script>scripts\state_card_deselected.gml</script>
       </scripts>
       <scripts name="System">
