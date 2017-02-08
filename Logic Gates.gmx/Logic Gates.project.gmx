@@ -150,8 +150,8 @@
       </scripts>
     </scripts>
     <scripts name="System">
-      <script>scripts\scr_clear.gml</script>
       <script>scripts\scr_room_initalize.gml</script>
+      <script>scripts\scr_randomize_deck.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

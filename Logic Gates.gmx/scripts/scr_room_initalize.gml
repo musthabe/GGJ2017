@@ -4,20 +4,25 @@
 
 *optional* some kind of a cutscene thing?
 Generate character objects (again with animation)
-Generate button objects (ALL one or more of them)
-Generate whatever system elements needed (view controller etc.)
 Transition animation
 Draw everything if it is not drawn yet
 Move into player turn state
 
 */
 
-//Clear the field
-scr_clear();
+//Clear the field of enemies
+with obj_enemy{
+    instance_destroy();
+}
 
 //Create the player
-player = instance_create(160, 256, obj_player);
+if not instance_exists(obj_player){
+    player = instance_create(160, 256, obj_player);
+}
 enemy  = instance_create(832, 320, obj_enemy);
+
+//Randomize the player's deck
+
 
 //Go to the idle state
 obj_state_controller.state = states.idle;
