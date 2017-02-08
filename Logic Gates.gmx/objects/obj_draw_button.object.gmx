@@ -86,6 +86,7 @@ else{
             <kind>1</kind>
             <string>///Draw a new hand upon mouse release
 
+
 obj_state_controller.state = states.draw;
 
 

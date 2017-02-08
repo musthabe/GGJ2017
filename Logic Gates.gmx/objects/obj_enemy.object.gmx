@@ -35,10 +35,6 @@ hp_max  = 0;
 hp      = 0;
 atk     = 0;
 
-//Skills
-//skills = ds_list_create();
-
-
 </string>
           </argument>
         </arguments>
@@ -130,7 +126,6 @@ ds_list_sort(colorlist, true);
 randomize();
 
 //Sort it all out and set it as the enemy sprite
-show_debug_message("sprite: " + string(ds_map_find_value(ds_map_find_value(map, choose(RED, BLUE, YELLOW, WHITE, BLACK)), choose(RED, BLUE, YELLOW, WHITE, BLACK))));
 sprite_index = ds_map_find_value(ds_map_find_value(map, ds_list_find_value(colorlist, 0)), ds_list_find_value(colorlist, 1));
 
 //And finally destory all the maps to avoid memory leak

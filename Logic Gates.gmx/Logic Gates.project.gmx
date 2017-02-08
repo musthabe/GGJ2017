@@ -145,10 +145,13 @@
         <script>scripts\state_card_deselected.gml</script>
       </scripts>
       <scripts name="System">
-        <script>scripts\state_room_initalize.gml</script>
         <script>scripts\state_next_room.gml</script>
         <script>scripts\state_break_menu.gml</script>
       </scripts>
+    </scripts>
+    <scripts name="System">
+      <script>scripts\scr_clear.gml</script>
+      <script>scripts\scr_room_initalize.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

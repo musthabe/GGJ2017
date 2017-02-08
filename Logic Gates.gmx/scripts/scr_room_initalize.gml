@@ -1,4 +1,4 @@
-///state_room_initialize();
+///scr_room_initialize();
 
 /*
 
@@ -8,8 +8,6 @@ Generate button objects (ALL one or more of them)
 Generate whatever system elements needed (view controller etc.)
 Transition animation
 Draw everything if it is not drawn yet
-Begin timer countdown
-Player cannot click on anything throughout the whole state
 Move into player turn state
 
 */
@@ -21,5 +19,13 @@ scr_clear();
 player = instance_create(160, 256, obj_player);
 enemy  = instance_create(832, 320, obj_enemy);
 
+//Go to the idle state
 obj_state_controller.state = states.idle;
+
+
+//TODO create buttons?
+
+//TODO create GUI items?
+
+//TODO animations
 

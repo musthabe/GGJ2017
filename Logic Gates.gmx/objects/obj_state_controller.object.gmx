@@ -31,7 +31,7 @@ enum states {
     idle,
     draw,
     attack,
-    pass
+    pass,
 }
 
 state = states.idle;
@@ -67,6 +67,7 @@ if room == new_testroom{
         default:            state_player_turn();break;
     }
 }
+
 </string>
           </argument>
         </arguments>
