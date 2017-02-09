@@ -2,7 +2,7 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -25,12 +25,45 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_debug_message(ds_list_size(obj_deck.player_deck));
+            <string>scr_room_initialize();
 
-for (var i=0; i &lt; ds_list_size(obj_deck.player_deck); i++){
-    show_debug_message("Card " + string(i) + "; Color: " + string(ds_list_find_value(obj_deck.player_deck, i).color));
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="17">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>show_debug_message("Current state: " + string(obj_state_controller.state));
+
+show_debug_message("Cards in hand: " + string(ds_list_size(obj_deck.hand)));
+
+//show_debug_message("Card number 3: " + string(ds_list_find_value(obj_deck.hand, 2).color));
+
+with obj_deck{
+    card = ds_list_find_value(temp_deck, 0);
+    card.x = xhand;
+    card.y = yhand;
+    
+    //card=instance_create(xhand,yhand,obj_card);
+    //card.color = colors.white;
 }
-
 </string>
           </argument>
         </arguments>

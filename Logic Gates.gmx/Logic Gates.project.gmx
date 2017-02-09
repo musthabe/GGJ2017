@@ -147,12 +147,14 @@
       <scripts name="System">
         <script>scripts\state_next_room.gml</script>
         <script>scripts\state_break_menu.gml</script>
+        <script>scripts\state_game_end.gml</script>
       </scripts>
     </scripts>
     <scripts name="System">
-      <script>scripts\scr_room_initalize.gml</script>
+      <script>scripts\scr_room_initialize.gml</script>
       <script>scripts\scr_randomize_deck.gml</script>
       <script>scripts\scr_generate_card.gml</script>
+      <script>scripts\scr_hand_draw.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

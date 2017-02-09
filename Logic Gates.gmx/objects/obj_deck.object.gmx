@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>///Initialize deck object
 
-//Deck &amp; hand size
-deck_size = 30;
+//Deck &amp; hand sizes
+deck_size = 50;
 hand_size = 5;
 
 //Player deck initialize
@@ -73,25 +73,54 @@ spacing = 160;
           <argument>
             <kind>1</kind>
             <string>///Create a deck of cards with 10 of each color
-
 for (var i = 0; i &lt; 10; i++){
     ds_list_add(player_deck, scr_generate_card(colors.red,false));
 }
-
 for (var i = 0; i &lt; 10; i++){
     ds_list_add(player_deck, scr_generate_card(colors.blue,false));
 }
-
 for (var i = 0; i &lt; 10; i++){
     ds_list_add(player_deck, scr_generate_card(colors.yellow,false));
 }
-
 for (var i = 0; i &lt; 10; i++){
     ds_list_add(player_deck, scr_generate_card(colors.white,false));
 }
-
 for (var i = 0; i &lt; 10; i++){
     ds_list_add(player_deck, scr_generate_card(colors.black,false));
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="72">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Graphically draw the cards that are in the hand list
+
+//Go through all the cards in the hand list
+if ds_list_size(hand) &gt; 0{ 
+    for(var i=0; i &lt; ds_list_size(hand); i++){
+        card = ds_list_find_value(hand, i);
+        card.x = xhand+xhand*i+spacing;
+        card.y = yhand;
+        card.image_index = self.color;
+        card.visible = true;
+    }
 }
 </string>
           </argument>

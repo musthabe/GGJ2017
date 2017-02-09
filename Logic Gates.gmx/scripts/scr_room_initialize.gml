@@ -10,8 +10,11 @@ Move into player turn state
 
 */
 
-//Clear the field of enemies
+//Clear the field of enemies, clear the deck and the hand
 with obj_enemy{
+    instance_destroy();
+}
+with obj_deck{
     instance_destroy();
 }
 
@@ -21,8 +24,12 @@ if not instance_exists(obj_player){
 }
 enemy  = instance_create(832, 320, obj_enemy);
 
-//Randomize the player's deck
+//Create and randomize the player's deck
+instance_create(0,0,obj_deck);
+scr_randomize_deck();
 
+//Draw cards into hand list
+scr_hand_draw();
 
 //Go to the idle state
 obj_state_controller.state = states.idle;

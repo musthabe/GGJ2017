@@ -32,6 +32,7 @@ enum states {
     draw,
     attack,
     pass,
+    quit
 }
 
 state = states.idle;
@@ -64,6 +65,7 @@ if room == new_testroom{
     switch (state){
         case states.idle:   state_player_turn();break;
         case states.draw:   state_hand_draw();break;
+        case states.quit:   state_game_end();break;
         default:            state_player_turn();break;
     }
 }
