@@ -152,12 +152,14 @@
     <scripts name="System">
       <script>scripts\scr_room_initalize.gml</script>
       <script>scripts\scr_randomize_deck.gml</script>
+      <script>scripts\scr_generate_card.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
     <objects name="System">
       <object>objects\obj_state_controller</object>
       <object>objects\obj_view_controller</object>
+      <object>objects\obj_debugger</object>
     </objects>
     <objects name="Cards">
       <object>objects\obj_card</object>
