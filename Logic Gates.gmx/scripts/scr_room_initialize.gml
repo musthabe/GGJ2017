@@ -18,7 +18,7 @@ with obj_deck{
     instance_destroy();
 }
 
-//Create the player
+//Create the player and enemy characters
 if not instance_exists(obj_player){
     player = instance_create(160, 256, obj_player);
 }

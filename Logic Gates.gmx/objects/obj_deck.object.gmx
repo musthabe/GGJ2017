@@ -118,7 +118,6 @@ if ds_list_size(hand) &gt; 0{
         card = ds_list_find_value(hand, i);
         card.x = xhand+xhand*i+spacing;
         card.y = yhand;
-        card.image_index = self.color;
         card.visible = true;
     }
 }

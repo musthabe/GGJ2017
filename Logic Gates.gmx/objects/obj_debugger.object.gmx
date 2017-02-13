@@ -26,8 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>scr_room_initialize();
-
-
 </string>
           </argument>
         </arguments>
