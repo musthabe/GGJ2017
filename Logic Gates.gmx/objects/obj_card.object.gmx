@@ -27,16 +27,6 @@
             <kind>1</kind>
             <string>///Initialize card object
 
-//Animation
-image_index = 0;
-image_speed = 0;
-
-//Stats
-color = 0;
-
-//Selection
-selected = false;
-
 //Color options
 enum colors {
     red,
@@ -45,6 +35,12 @@ enum colors {
     white,
     black
 }
+
+//Animation
+image_speed = 0;
+
+//Selection
+selected = false;
 </string>
           </argument>
         </arguments>

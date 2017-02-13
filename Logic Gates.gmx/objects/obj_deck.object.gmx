@@ -43,7 +43,7 @@ queue       = ds_list_create();
 operators   = ds_list_create();
 
 //Player hand origin
-xhand = 120;
+xhand = 96;
 yhand = 640;
 
 //Queue origin
@@ -116,7 +116,7 @@ for (var i = 0; i &lt; 10; i++){
 if ds_list_size(hand) &gt; 0{ 
     for(var i=0; i &lt; ds_list_size(hand); i++){
         card = ds_list_find_value(hand, i);
-        card.x = xhand+xhand*i+spacing;
+        card.x = xhand + xhand*i + spacing;
         card.y = yhand;
         card.visible = true;
     }
