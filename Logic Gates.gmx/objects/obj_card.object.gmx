@@ -46,6 +46,48 @@ selected = false;
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw the card
+if ds_list_find_index(obj_deck.hand, self) &gt;= 0  {
+    
+    x = obj_deck.xhand + obj_deck.xhand*ds_list_find_index(obj_deck.hand, self) + obj_deck.spacing;
+    
+    if selected{
+        y = obj_deck.yhand - 80;
+    }
+    else{
+        y = obj_deck.yhand;
+    }
+      
+    visible = true;
+}
+
+else {
+    visible = false;
+    x = 0;
+    y = 0;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="6" enumb="7">
       <action>
         <libid>1</libid>
@@ -67,8 +109,13 @@ selected = false;
 
 //ds_list_delete(obj_deck.hand, ds_list_find_index(obj_deck.hand, self));
 
+if not selected {
+    selected = true;
+}
 
-self.y -= 100;
+else{
+    selected = false;
+}
 </string>
           </argument>
         </arguments>

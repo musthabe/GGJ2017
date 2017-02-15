@@ -48,13 +48,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_debug_message("Current state: " + string(obj_state_controller.state));
+            <string>show_debug_message("Cards in hand: " + string(ds_list_size(obj_deck.hand)));
 
-show_debug_message("Cards in hand: " + string(ds_list_size(obj_deck.hand)));
-
-//show_debug_message("Card number 3: " + string(ds_list_find_value(obj_deck.hand, 2).color));
-
-scr_hand_draw();
+for (var i = 0; i &lt; ds_list_size(obj_deck.hand); i++){
+    show_debug_message("Card " + string(i) + ": " + string(ds_list_find_value(obj_deck.hand, i)));
+}
 </string>
           </argument>
         </arguments>
