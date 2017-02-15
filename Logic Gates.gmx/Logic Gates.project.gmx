@@ -152,9 +152,13 @@
     </scripts>
     <scripts name="System">
       <script>scripts\scr_room_initialize.gml</script>
-      <script>scripts\scr_randomize_deck.gml</script>
-      <script>scripts\scr_generate_card.gml</script>
+    </scripts>
+    <scripts name="Hand">
       <script>scripts\scr_hand_draw.gml</script>
+    </scripts>
+    <scripts name="Deck">
+      <script>scripts\scr_generate_card.gml</script>
+      <script>scripts\scr_randomize_deck.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

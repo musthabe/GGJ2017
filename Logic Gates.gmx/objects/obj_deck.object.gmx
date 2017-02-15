@@ -121,6 +121,7 @@ if ds_list_size(hand) &gt; 0{
         card.visible = true;
     }
 }
+
 </string>
           </argument>
         </arguments>
