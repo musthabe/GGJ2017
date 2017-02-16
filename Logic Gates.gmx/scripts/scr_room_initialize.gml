@@ -31,8 +31,8 @@ scr_randomize_deck();
 //Draw cards into hand list
 scr_hand_draw();
 
-//Go to the idle state
-obj_state_controller.state = states.idle;
+//Go to the player turn state
+global.state = states.player;
 
 
 //TODO create buttons?

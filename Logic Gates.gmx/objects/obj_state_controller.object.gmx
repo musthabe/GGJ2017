@@ -26,16 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize the state controller variable
-
 enum states {
-    idle,
-    draw,
+    player,
+    queue_active,
     attack,
     pass,
     quit
 }
 
-state = states.idle;
+global.state = states.player;
 </string>
           </argument>
         </arguments>
@@ -62,11 +61,10 @@ state = states.idle;
 
 //Check if the current room is new_testroom and set the states accordingly
 if room == new_testroom{
-    switch (state){
-        case states.idle:   state_player_turn();break;
-        case states.draw:   state_hand_draw();break;
-        case states.quit:   state_game_end();break;
-        default:            state_player_turn();break;
+    switch (global.state){
+        case states.player:         state_player_turn();break;
+        case states.quit:           state_game_end();break;
+        default:                    ;break;
     }
 }
 

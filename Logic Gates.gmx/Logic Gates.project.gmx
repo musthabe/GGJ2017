@@ -137,7 +137,6 @@
       </scripts>
       <scripts name="Queue">
         <script>scripts\state_queue_activated.gml</script>
-        <script>scripts\state_queue_deactivated.gml</script>
       </scripts>
       <scripts name="Hand">
         <script>scripts\state_card_selected.gml</script>

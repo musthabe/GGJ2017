@@ -87,8 +87,6 @@ else{
             <string>///Draw a new hand upon mouse release
 
 
-obj_state_controller.state = states.draw;
-
 
 /*
 audio_play_sound(draw_cards, 4, false);
