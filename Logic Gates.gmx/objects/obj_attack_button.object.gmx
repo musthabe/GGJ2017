@@ -82,7 +82,9 @@ else {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>obj_state_controller.state = states.player_attack;
+
+
 /*
 if(ds_list_size(obj_queue.queue) == 2){
     audio_play_sound(spell_attack, 3, false);

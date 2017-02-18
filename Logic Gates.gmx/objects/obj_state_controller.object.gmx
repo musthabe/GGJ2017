@@ -29,7 +29,7 @@
 enum states {
     player,
     queue_active,
-    attack,
+    player_attack,
     pass,
     quit
 }
@@ -63,8 +63,9 @@ global.state = states.player;
 if room == new_testroom{
     switch (global.state){
         case states.player:         state_player_turn();break;
+        case states.player_attack:  state_player_attack();break;
         case states.quit:           state_game_end();break;
-        default:                    ;break;
+        default:                    break;
     }
 }
 

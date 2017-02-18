@@ -15,6 +15,15 @@ else{
 }
 
 
+//If there are 2+ cards in the queue, create an operator object between them.
+if ds_list_size(obj_deck.queue) > 1 {
+    for (var i = 0; i < ds_list_size(obj_deck.queue); i++){
+        card1 = ds_list_find_value(obj_deck.queue, i);
+        card2 = ds_list_find_value(obj_deck.queue, i+1);
+        instance_create(((card1.x + card2.x)/2), ((card1.y + card2.y) / 2), obj_operator);
+    }
+}
+
 
 
 //Wait until input
