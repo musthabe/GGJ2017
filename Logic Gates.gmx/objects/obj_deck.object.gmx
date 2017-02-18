@@ -43,15 +43,15 @@ queue       = ds_list_create();
 operators   = ds_list_create();
 
 //Player hand origin
-xhand = 96;
+xhand = 160;
 yhand = 640;
 
 //Queue origin
-xqueue = 120;
+xqueue = 160;
 yqueue = 480;
 
 //Card spacing
-spacing = 160;
+spacing = 0;
 </string>
           </argument>
         </arguments>

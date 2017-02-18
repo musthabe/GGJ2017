@@ -63,7 +63,7 @@ selected = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw the card on the screen
+            <string>///Draw the cards on the screen
 
 //Check if the card object exists in the Hand list
 if ds_list_find_index(obj_deck.hand, self) &gt;= 0  {
@@ -82,7 +82,24 @@ if ds_list_find_index(obj_deck.hand, self) &gt;= 0  {
     visible = true;
 }
 
-//If the card is not in the Hand list then hide it and place it to 0,0
+//Check if the card object exists in the Queue list
+else if ds_list_find_index(obj_deck.queue, self) &gt;= 0  {
+
+    //Set the coordinates of the card to be drawn on the screen
+    x = obj_deck.xqueue + obj_deck.xqueue*ds_list_find_index(obj_deck.queue, self) + obj_deck.spacing;
+    
+    //Special case for when the card is clicked on
+    if selected{
+        y = obj_deck.yqueue - 80;
+    }
+    else{
+        y = obj_deck.yqueue;
+    }
+     
+    visible = true;
+}
+
+//If the card is not in the Hand or Queue lists then hide it and place it to 0,0
 else {
     visible = false;
     x = 0;
@@ -114,14 +131,25 @@ else {
 
 //ds_list_delete(obj_deck.hand, ds_list_find_index(obj_deck.hand, self));
 
-if not selected {
-    selected = true;
+//Check if a card in the haand is clicked to be moved to the queue
+if ds_list_find_index(obj_deck.hand, self) &gt;= 0 {
+    ds_list_delete(obj_deck.hand, ds_list_find_index(obj_deck.hand, self));
+    ds_list_add(obj_deck.queue, self);
 }
 
-else{
-    selected = false;
+//Check if a card in the queue is clicked to be moved to the hand
+else if ds_list_find_index(obj_deck.queue, self) &gt;= 0 {
+    ds_list_delete(obj_deck.queue, ds_list_find_index(obj_deck.queue, self));
+    ds_list_add(obj_deck.hand, self);
 }
 
+/*
+with obj_deck{
+    for(var i = ds_list_size(hand); i &lt; hand_size; i++){
+        ds_list_add(hand, ds_list_find_value(temp_deck, ds_list_size(temp_deck) -1));
+        ds_list_delete(temp_deck, ds_list_size(temp_deck) -1);
+    }
+}
 </string>
           </argument>
         </arguments>

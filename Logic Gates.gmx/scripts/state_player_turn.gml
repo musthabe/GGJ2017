@@ -17,7 +17,6 @@ else{
 
 
 
-
 //Wait until input
 
 //INPUT: card clicked 
