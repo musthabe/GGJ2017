@@ -151,6 +151,7 @@
     </scripts>
     <scripts name="System">
       <script>scripts\scr_room_initialize.gml</script>
+      <script>scripts\scr_player_draw_phase.gml</script>
     </scripts>
     <scripts name="Hand">
       <script>scripts\scr_hand_draw.gml</script>

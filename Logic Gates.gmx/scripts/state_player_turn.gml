@@ -1,5 +1,8 @@
 ///state_player_turn();
 
+
+
+/*
 //Draw hand up to 5 without discarding the ones already in the hand.
 if (ds_list_size(obj_deck.queue) + ds_list_size(obj_deck.hand)) < 5{
     scr_hand_draw();
@@ -16,26 +19,20 @@ else{
 
 
 //If there are 2+ cards in the queue, create an operator object between them.
-if ds_list_size(obj_deck.queue) > 1 {
-    for (var i = 0; i < ds_list_size(obj_deck.queue); i++){
-        card1 = ds_list_find_value(obj_deck.queue, i);
-        card2 = ds_list_find_value(obj_deck.queue, i+1);
-        instance_create(((card1.x + card2.x)/2), ((card1.y + card2.y) / 2), obj_operator);
-    }
+
+q_size = ds_list_size(obj_deck.queue)
+
+if q_size > 1 {
+    card1 = ds_list_find_value(obj_deck.queue, q_size-2);
+    card2 = ds_list_find_value(obj_deck.queue, q_size-1);
+    instance_create((card1.x + card2.x) / 2, card1.y, obj_operator);
+    
+    
 }
 
-
-
-//Wait until input
-
-//INPUT: card clicked 
-//INPUT: pass button clicked
-//INPUT: attack button clicked
-
-
-//CARD: clicked when card is in hand and queue is empty
-//CARD: clicked when card is in hand and queue is not empty
-
-//CARD: clicked when card is in queue
-
-//OPERATOR logic when cards are in queue
+else {
+    with obj_operator{
+        instance_destroy();
+    }
+}
+*/

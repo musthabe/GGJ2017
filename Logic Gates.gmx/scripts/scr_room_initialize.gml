@@ -32,6 +32,7 @@ scr_randomize_deck();
 scr_hand_draw();
 
 //Go to the player turn state
+scr_player_draw_phase();
 global.state = states.player;
 
 
