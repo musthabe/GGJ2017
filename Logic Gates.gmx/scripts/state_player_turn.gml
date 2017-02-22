@@ -1,7 +1,6 @@
 ///state_player_turn();
 
 
-
 /*
 //Draw hand up to 5 without discarding the ones already in the hand.
 if (ds_list_size(obj_deck.queue) + ds_list_size(obj_deck.hand)) < 5{

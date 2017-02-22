@@ -134,14 +134,17 @@ else {
             <kind>1</kind>
             <string>///Mark card selection upon click
 
-if global.selected != self {
-    global.selected  = self;
+if global.state == states.player {
+    show_debug_message("clicked");
+    
+    if global.selected != self {
+        global.selected  = self;
+    }
+    
+    else if global.selected == self {
+        global.selected = noone;
+    }
 }
-
-else if global.selected == self {
-    global.selected = noone;
-}
-
 /*
 //ds_list_delete(obj_deck.hand, ds_list_find_index(obj_deck.hand, self));
 

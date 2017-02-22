@@ -128,12 +128,9 @@
     <scripts name="States">
       <scripts name="Player">
         <script>scripts\state_player_turn.gml</script>
-        <script>scripts\state_player_attack.gml</script>
       </scripts>
       <scripts name="Enemy">
         <script>scripts\state_enemy_turn.gml</script>
-        <script>scripts\state_enemy_attack.gml</script>
-        <script>scripts\state_new_enemy.gml</script>
       </scripts>
       <scripts name="Queue">
         <script>scripts\state_queue_activated.gml</script>
