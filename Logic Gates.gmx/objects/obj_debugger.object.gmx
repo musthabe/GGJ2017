@@ -51,6 +51,7 @@
             <string>show_debug_message("Cards in hand: " + string(ds_list_size(obj_deck.hand)));
 show_debug_message("Cards in queue: " + string(ds_list_size(obj_deck.queue)));
 
+
 /*
 for (var i = 0; i &lt; ds_list_size(obj_deck.hand); i++){
     show_debug_message("Card " + string(i) + ": " + string(ds_list_find_value(obj_deck.hand, i)));

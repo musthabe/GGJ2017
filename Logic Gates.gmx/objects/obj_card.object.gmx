@@ -40,7 +40,8 @@ enum colors {
 image_speed = 0;
 
 //Selection
-selected = false;
+global.selected = noone;
+global.c_select = 0;
 
 //Stats
 effect = noone;
@@ -75,8 +76,8 @@ if ds_list_find_index(obj_deck.hand, self) &gt;= 0  {
     x = obj_deck.xhand + obj_deck.xhand*ds_list_find_index(obj_deck.hand, self) + obj_deck.spacing;
     
     //Special case for when the card is clicked on
-    if selected{
-        y = obj_deck.yhand - 40;
+    if global.selected == self{
+        y = obj_deck.yhand - 10;
        
     }
     else{
@@ -93,7 +94,7 @@ else if ds_list_find_index(obj_deck.queue, self) &gt;= 0  {
     x = obj_deck.xqueue + obj_deck.xqueue*ds_list_find_index(obj_deck.queue, self) + obj_deck.spacing;
     
     //Special case for when the card is clicked on
-    if selected{
+    if global.selected == self{
         y = obj_deck.yqueue - 80;
     }
     else{
@@ -133,12 +134,13 @@ else {
             <kind>1</kind>
             <string>///Mark card selection upon click
 
-if not selected {
-    selected  = true;
+if global.selected != self {
+    global.selected  = self;
 }
 
-else selected = false;
-
+else if global.selected == self {
+    global.selected = noone;
+}
 
 /*
 //ds_list_delete(obj_deck.hand, ds_list_find_index(obj_deck.hand, self));
@@ -184,7 +186,8 @@ with obj_deck{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if selected{
+            <string>//Draw border around selected card
+if global.selected == self{
     draw_sprite_ext(spr_card, 5,x,y,1.07,1.07,0,c_yellow,1);
     
     draw_sprite(spr_card,-1,x,y);

@@ -153,12 +153,17 @@
       <script>scripts\scr_room_initialize.gml</script>
       <script>scripts\scr_player_draw_phase.gml</script>
     </scripts>
-    <scripts name="Hand">
-      <script>scripts\scr_hand_draw.gml</script>
-    </scripts>
-    <scripts name="Deck">
-      <script>scripts\scr_generate_card.gml</script>
-      <script>scripts\scr_randomize_deck.gml</script>
+    <scripts name="Cards">
+      <scripts name="Deck">
+        <script>scripts\scr_generate_card.gml</script>
+        <script>scripts\scr_randomize_deck.gml</script>
+        <script>scripts\scr_hand_draw.gml</script>
+      </scripts>
+      <script>scripts\scr_red_spell.gml</script>
+      <script>scripts\scr_blue_spell.gml</script>
+      <script>scripts\scr_yellow_spell.gml</script>
+      <script>scripts\scr_white_spell.gml</script>
+      <script>scripts\scr_black_spell.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
