@@ -85,6 +85,9 @@ else {
             <string>///Go to player attack state
 obj_state_controller.state = states.player_attack;
 
+if instance_exists(global.selected) {
+    script_execute(global.selected.effect);
+}
 
 /*
 if(ds_list_size(obj_queue.queue) == 2){
