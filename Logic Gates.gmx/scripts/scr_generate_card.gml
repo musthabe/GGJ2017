@@ -1,7 +1,7 @@
 ///scr_generate_card(color);
 //creates a card of a specified color and make it invisible optionally
 
-tempcard = instance_create(0,0,obj_card);
+var tempcard = instance_create(0,0,obj_card);
 tempcard.color = argument0;
 tempcard.image_index = tempcard.color;
 

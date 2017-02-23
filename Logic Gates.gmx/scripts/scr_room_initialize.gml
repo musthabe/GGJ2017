@@ -14,6 +14,9 @@ Move into player turn state
 with obj_enemy{
     instance_destroy();
 }
+with obj_opponent{
+    instance_destroy();
+}
 with obj_deck{
     instance_destroy();
 }
@@ -22,7 +25,8 @@ with obj_deck{
 if not instance_exists(obj_player){
     player = instance_create(160, 256, obj_player);
 }
-enemy  = instance_create(832, 320, obj_enemy);
+randomize();
+scr_enemy_create(1,choose(0,1,2,3,4));
 
 //Create and randomize the player's deck
 instance_create(0,0,obj_deck);

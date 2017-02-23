@@ -1,5 +1,6 @@
 ///state_player_turn();
 
+scr_player_draw_phase();
 
 /*
 //Draw hand up to 5 without discarding the ones already in the hand.

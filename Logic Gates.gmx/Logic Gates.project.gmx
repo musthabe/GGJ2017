@@ -71,6 +71,7 @@
         </sprites>
         <sprite>sprites\spr_enemy</sprite>
         <sprite>sprites\sprite30</sprite>
+        <sprite>sprites\spr_opp</sprite>
       </sprites>
     </sprites>
     <sprites name="FX">
@@ -132,35 +133,36 @@
       <scripts name="Enemy">
         <script>scripts\state_enemy_turn.gml</script>
       </scripts>
-      <scripts name="Queue">
-        <script>scripts\state_queue_activated.gml</script>
-      </scripts>
-      <scripts name="Hand">
-        <script>scripts\state_card_selected.gml</script>
-        <script>scripts\state_hand_draw.gml</script>
-        <script>scripts\state_card_deselected.gml</script>
-      </scripts>
       <scripts name="System">
-        <script>scripts\state_next_room.gml</script>
         <script>scripts\state_break_menu.gml</script>
         <script>scripts\state_game_end.gml</script>
       </scripts>
     </scripts>
     <scripts name="System">
       <script>scripts\scr_room_initialize.gml</script>
-      <script>scripts\scr_player_draw_phase.gml</script>
     </scripts>
     <scripts name="Cards">
       <scripts name="Deck">
         <script>scripts\scr_generate_card.gml</script>
         <script>scripts\scr_randomize_deck.gml</script>
         <script>scripts\scr_hand_draw.gml</script>
+        <script>scripts\scr_player_draw_phase.gml</script>
       </scripts>
       <script>scripts\scr_red_spell.gml</script>
       <script>scripts\scr_blue_spell.gml</script>
       <script>scripts\scr_yellow_spell.gml</script>
       <script>scripts\scr_white_spell.gml</script>
       <script>scripts\scr_black_spell.gml</script>
+    </scripts>
+    <scripts name="Characters">
+      <script>scripts\scr_enemy_create.gml</script>
+      <scripts name="Enemy attacks">
+        <script>scripts\scr_enemy_red_attack.gml</script>
+        <script>scripts\scr_enemy_blue_attack.gml</script>
+        <script>scripts\scr_enemy_yellow_attack.gml</script>
+        <script>scripts\scr_enemy_white_attack.gml</script>
+        <script>scripts\scr_enemy_black_attack.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -176,6 +178,7 @@
     <objects name="Characters">
       <object>objects\obj_player</object>
       <object>objects\obj_enemy</object>
+      <object>objects\obj_opponent</object>
     </objects>
     <objects name="GUI">
       <object>objects\obj_draw_button</object>

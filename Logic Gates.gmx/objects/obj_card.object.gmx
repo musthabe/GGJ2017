@@ -135,7 +135,6 @@ else {
             <string>///Mark card selection upon click
 
 if global.state == states.player {
-    show_debug_message("clicked");
     
     if global.selected != self {
         global.selected  = self;

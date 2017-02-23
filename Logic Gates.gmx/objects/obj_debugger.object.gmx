@@ -52,6 +52,10 @@
 show_debug_message("Cards in queue: " + string(ds_list_size(obj_deck.queue)));
 show_debug_message("Current state: " + string(global.state));
 
+show_debug_message("Current enemy color: " + string(obj_opponent.color));
+show_debug_message("Current enemy special: " + string(obj_opponent.special));
+
+
 /*
 for (var i = 0; i &lt; ds_list_size(obj_deck.hand); i++){
     show_debug_message("Card " + string(i) + ": " + string(ds_list_find_value(obj_deck.hand, i)));
