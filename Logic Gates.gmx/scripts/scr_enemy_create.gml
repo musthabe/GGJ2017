@@ -1,11 +1,10 @@
 ///scr_enemey_create(level, color);
 
-enemy  = instance_create(832, 260, obj_opponent);
+enemy  = instance_create(830, 260, obj_opponent);
 with enemy{
     //Set the level and color if they are provided
     level = argument0;
     color = argument1;
-    special = noone;
 
     //Set the enemy special attack according to color
     switch (color){
@@ -25,8 +24,7 @@ with enemy{
     level = argument0;
     attack = 1 * round(argument0/2);
     hp = 3 * round(argument0/2);
-    special = noone;
-    cooldown = round(color/2);
+    cooldown = round(color/2) + 1;
 }
 
 //return enemy;

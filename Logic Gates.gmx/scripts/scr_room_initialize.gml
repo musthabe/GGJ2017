@@ -26,7 +26,7 @@ if not instance_exists(obj_player){
     player = instance_create(160, 256, obj_player);
 }
 randomize();
-scr_enemy_create(1,choose(0,1,2,3,4));
+scr_enemy_create(1,choose(colors.red, colors.blue, colors.yellow, colors.white, colors.black));
 
 //Create and randomize the player's deck
 instance_create(0,0,obj_deck);
