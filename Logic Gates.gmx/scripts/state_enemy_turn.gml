@@ -12,6 +12,7 @@ with obj_opponent{
         //Else attack directly and reduce cooldown by one
         show_debug_message("Enemy attacks directly");
         cooldown -= 1;
+        
     }
         
     //Go to player turn
