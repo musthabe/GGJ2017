@@ -111,21 +111,6 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <scripts name="Old stuff">
-      <script>scripts\scr_draw_hand.gml</script>
-      <script>scripts\scr_enemy_attack.gml</script>
-      <script>scripts\scr_new_wave.gml</script>
-      <scripts name="FSMScripts">
-        <script>scripts\state_machine_init.gml</script>
-        <script>scripts\state_create.gml</script>
-        <script>scripts\state_cleanup.gml</script>
-        <script>scripts\state_execute.gml</script>
-        <script>scripts\state_init.gml</script>
-        <script>scripts\state_switch.gml</script>
-        <script>scripts\state_switch_previous.gml</script>
-        <script>scripts\state_update.gml</script>
-      </scripts>
-    </scripts>
     <scripts name="States">
       <scripts name="Player">
         <script>scripts\state_player_turn.gml</script>
@@ -140,6 +125,7 @@
     </scripts>
     <scripts name="System">
       <script>scripts\scr_room_initialize.gml</script>
+      <script>scripts\scr_new_wave.gml</script>
     </scripts>
     <scripts name="Cards">
       <scripts name="Deck">
@@ -177,40 +163,15 @@
     </objects>
     <objects name="Characters">
       <object>objects\obj_player</object>
-      <object>objects\obj_enemy</object>
+      <object>objects\obj_enemy_redundant</object>
       <object>objects\obj_opponent</object>
     </objects>
     <objects name="GUI">
       <object>objects\obj_draw_button</object>
       <object>objects\obj_attack_button</object>
-    </objects>
-    <objects name="Old stuff">
-      <objects name="cards">
-        <object>objects\obj_card_old</object>
-        <object>objects\obj_card_black</object>
-        <object>objects\obj_card_blue</object>
-        <object>objects\obj_card_red</object>
-        <object>objects\obj_card_white</object>
-        <object>objects\obj_card_yellow</object>
-      </objects>
-      <object>objects\goto_next_room</object>
-      <object>objects\obj_continue</object>
-      <object>objects\obj_destroywall</object>
-      <object>objects\obj_enemy_old</object>
-      <object>objects\obj_enemy_view</object>
-      <object>objects\obj_fade</object>
-      <object>objects\obj_game_over_menu</object>
-      <object>objects\obj_hand</object>
-      <object>objects\obj_logo_room</object>
-      <object>objects\obj_operator</object>
-      <object>objects\obj_queue</object>
-      <object>objects\obj_particle</object>
-      <object>objects\obj_player_old</object>
-      <object>objects\obj_player_view</object>
       <object>objects\obj_quit_game</object>
       <object>objects\obj_start_game</object>
-      <object>objects\obj_timer</object>
-      <object>objects\obj_turn_controller</object>
+      <object>objects\obj_particle</object>
       <object>objects\obj_studio_logo</object>
     </objects>
   </objects>

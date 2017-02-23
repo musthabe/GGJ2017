@@ -29,7 +29,6 @@
 enum states {
     player,
     enemy,
-    pass,
     quit
 }
 
@@ -61,10 +60,10 @@ global.state = states.player;
 //Check if the current room is new_testroom and set the states accordingly
 if room == new_testroom{
     switch (global.state){
-        case states.player: state_player_turn();break;
-        case states.enemy:  state_enemy_turn(); break;
-        case states.quit:   state_game_end();   break;
-        default:            break;
+        case states.player:     state_player_turn();break;
+        case states.enemy:      state_enemy_turn(); break;
+        case states.quit:       state_game_end();   break;
+        default:                                    break;
     }
 }
 

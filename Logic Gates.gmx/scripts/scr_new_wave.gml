@@ -1,16 +1,21 @@
 ///scr_new_wave();
 
-//create a new encounter
-
-global.selected_count = 0;
-with (obj_enemy) {
+//Clear the field of enemies, clear the deck and the hand
+with obj_opponent{
+    instance_destroy();
+}
+with obj_deck{
     instance_destroy();
 }
 
+scr_enemy_create(obj_player.level ,choose(colors.red, colors.blue, colors.yellow, colors.white, colors.black));
 
-ds_list_clear(obj_queue.queue);
-ds_list_clear(obj_queue.operators);
-ds_list_clear(obj_hand.hand);
+//Create and randomize the player's deck
+instance_create(0,0,obj_deck);
+scr_randomize_deck();
 
+//Draw cards into hand list
+scr_hand_draw();
 
-enemy = instance_create(800, 320 , obj_enemy);
+//Go to the player turn state
+global.state = states.player;

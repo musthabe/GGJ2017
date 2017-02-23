@@ -21,10 +21,11 @@ with enemy{
     image_speed = 0;
     
     //Enemy stats
-    level = argument0;
-    attack = 1 * round(argument0/2);
-    hp = 3 * round(argument0/2);
-    cooldown = round(color/2) + 1;
+    level   = argument0;
+    attack  = 1 + round(level/2);
+    skill   = max(1, level);
+    hp_max  = 3 * + level;
+    hp      = hp_max;
+    cooldown= max(5 - skill, 1);
 }
 
-//return enemy;
