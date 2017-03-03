@@ -8,6 +8,9 @@ with obj_opponent{
 with obj_deck{
     instance_destroy();
 }
+with obj_wave_controller{
+    instance_destroy();
+}
 
 //Create the player and enemy characters
 if not instance_exists(obj_player){
