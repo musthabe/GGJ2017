@@ -16,6 +16,9 @@ if not instance_exists(obj_player){
 randomize();
 scr_enemy_create(obj_player.level, choose(colors.red, colors.blue, colors.yellow, colors.white, colors.black));
 
+//Create the wave controller
+instance_create(0,0,obj_wave_controller);
+
 //Create and randomize the player's deck
 instance_create(0,0,obj_deck);
 scr_randomize_deck();

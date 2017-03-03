@@ -157,6 +157,7 @@
       <object>objects\obj_view_controller</object>
       <object>objects\obj_debugger</object>
       <object>objects\obj_game_ender</object>
+      <object>objects\obj_wave_controller</object>
     </objects>
     <objects name="Cards">
       <object>objects\obj_card</object>
