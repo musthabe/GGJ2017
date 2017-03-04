@@ -28,7 +28,7 @@
             <string>///Initialize deck object
 
 //Deck &amp; hand sizes
-deck_size = 50;
+deck_size = 30;
 hand_size = 5;
 
 //Player deck initialize
@@ -72,20 +72,22 @@ spacing = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Create a deck of cards with 10 of each color
-for (var i = 0; i &lt; 10; i++){
+            <string>///Create a deck of cards with cnt amount of cards
+cnt = deck_size/5;
+
+for (var i = 0; i &lt; cnt; i++){
     ds_list_add(player_deck, scr_generate_card(colors.red));
 }
-for (var i = 0; i &lt; 10; i++){
+for (var i = 0; i &lt; cnt; i++){
     ds_list_add(player_deck, scr_generate_card(colors.blue));
 }
-for (var i = 0; i &lt; 10; i++){
+for (var i = 0; i &lt; cnt; i++){
     ds_list_add(player_deck, scr_generate_card(colors.yellow));
 }
-for (var i = 0; i &lt; 10; i++){
+for (var i = 0; i &lt; cnt; i++){
     ds_list_add(player_deck, scr_generate_card(colors.white));
 }
-for (var i = 0; i &lt; 10; i++){
+for (var i = 0; i &lt; cnt; i++){
     ds_list_add(player_deck, scr_generate_card(colors.black));
 }
 </string>
@@ -123,6 +125,32 @@ if ds_list_size(hand) &gt; 0{
     }
 }
 */
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw the deck counter on screen
+
+draw_text(room_width - 100, room_height - 100, "Deck: " + 
+        string(ds_list_size(temp_deck)) + " / " + string(deck_size));
 </string>
           </argument>
         </arguments>

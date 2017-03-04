@@ -108,6 +108,11 @@
     <background>background\bg_main_screen</background>
     <background>background\bg_story</background>
     <background>background\game_over</background>
+    <background>background\bg_level1</background>
+    <background>background\bg_level2</background>
+    <background>background\bg_level3</background>
+    <background>background\bg_level4</background>
+    <background>background\bg_level5</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -184,6 +189,13 @@
     <room>rooms\rm_main_screen</room>
     <room>rooms\rm_game_over</room>
     <room>rooms\story_room</room>
+    <rooms name="Levels">
+      <room>rooms\rm_level1</room>
+      <room>rooms\rm_level2</room>
+      <room>rooms\rm_level3</room>
+      <room>rooms\rm_level4</room>
+      <room>rooms\rm_level5</room>
+    </rooms>
   </rooms>
   <constants number="5">
     <constant name="RED">0</constant>
