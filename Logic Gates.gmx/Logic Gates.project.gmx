@@ -155,10 +155,12 @@
         <script>scripts\scr_enemy_black_attack.gml</script>
       </scripts>
     </scripts>
+    <script>scripts\draw_text_outline.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_wave</font>
     <font>fonts\fnt_text</font>
+    <font>fonts\fnt_text_border</font>
   </fonts>
   <objects name="objects">
     <objects name="System">
