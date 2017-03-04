@@ -156,6 +156,10 @@
       </scripts>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_wave</font>
+    <font>fonts\fnt_text</font>
+  </fonts>
   <objects name="objects">
     <objects name="System">
       <object>objects\obj_state_controller</object>

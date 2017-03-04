@@ -148,8 +148,8 @@ if ds_list_size(hand) &gt; 0{
           <argument>
             <kind>1</kind>
             <string>///Draw the deck counter on screen
-
-draw_text(room_width - 100, room_height - 100, "Deck: " + 
+draw_set_font(fnt_text);
+draw_text(room_width - 100, room_height - 50, "Deck: " + 
         string(ds_list_size(temp_deck)) + " / " + string(deck_size));
 </string>
           </argument>
