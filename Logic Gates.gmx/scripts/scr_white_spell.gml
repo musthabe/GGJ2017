@@ -2,6 +2,10 @@
 
 show_debug_message("Casting White spell!");
 
+obj_player.hp += 1 + obj_player.white_skill;
+
+
+/*
 var damage = obj_player.white_skill;
 
 if obj_opponent.color == colors.black{

@@ -87,6 +87,7 @@
         <sprite>sprites\spr_continue</sprite>
         <sprite>sprites\spr_quit_game</sprite>
         <sprite>sprites\spr_start_game</sprite>
+        <sprite>sprites\spr_level_selection</sprite>
       </sprites>
       <sprites name="Game buttons">
         <sprite>sprites\spr_attack_button</sprite>
@@ -113,6 +114,7 @@
     <background>background\bg_level3</background>
     <background>background\bg_level4</background>
     <background>background\bg_level5</background>
+    <background>background\bg_level_selection</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -131,6 +133,7 @@
     <scripts name="System">
       <script>scripts\scr_room_initialize.gml</script>
       <script>scripts\scr_new_wave.gml</script>
+      <script>scripts\draw_text_outline.gml</script>
     </scripts>
     <scripts name="Cards">
       <scripts name="Deck">
@@ -155,7 +158,6 @@
         <script>scripts\scr_enemy_black_attack.gml</script>
       </scripts>
     </scripts>
-    <script>scripts\draw_text_outline.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_wave</font>
@@ -186,9 +188,11 @@
       <object>objects\obj_start_game</object>
       <object>objects\obj_particle</object>
       <object>objects\obj_studio_logo</object>
+      <object>objects\obj_level_selection_button</object>
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_level_selector</room>
     <room>rooms\new_testroom</room>
     <room>rooms\rm_logo_first</room>
     <room>rooms\testroom</room>
